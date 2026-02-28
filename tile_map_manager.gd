@@ -56,15 +56,26 @@ static var enum_to_uv: Dictionary[int, Vector2i] = {
 
 var tile_grid: Dictionary[Vector2i, FloorMaterial] = {}
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	var packedLevel: PackedScene = load("res://Scenes/Levels/goblin_level.tscn")
-	
-	var level = packedLevel.instantiate()
-	
-	for tile: Vector2i in level.get_used_cells():
-		set_tile_mat(tile, level.get_cell_source_id(tile) as FloorMaterial)
+var decorationMap: TileMapLayer
 
+func _ready() -> void:
+	load_level(load("res://Scenes/Levels/goblin_level.tscn"))
+
+func load_level(scene: PackedScene) -> void:
+	var rootNode: Node = scene.instantiate()
+	var floorTiles: TileMapLayer = rootNode.find_child("Floor")
+	
+	if (decorationMap != null):
+		decorationMap.queue_free()
+	
+	decorationMap = rootNode.find_child("Decorations")
+	decorationMap.position = Vector2(8, 8)
+	decorationMap.reparent(self)
+	
+	for tile: Vector2i in floorTiles.get_used_cells():
+		set_tile_mat(tile, floorTiles.get_cell_source_id(tile) as FloorMaterial)
+	
+	floorTiles.queue_free()
 
 func get_tile_mat(pos: Vector2i):
 	if (tile_grid.has(pos)):
