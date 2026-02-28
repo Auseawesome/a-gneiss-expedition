@@ -2,10 +2,15 @@
 
 [ext_resource type="Script" uid="uid://bq0cvp0ifaviq" path="res://scripts/level/tile_map_manager.gd" id="1_dwbse"]
 [ext_resource type="Texture2D" uid="uid://c13q61vq7aro1" path="res://sprites/tileset/grass.png" id="1_f3sb7"]
+[ext_resource type="PackedScene" uid="uid://dbugt2b03h0mj" path="res://scenes/levels/goblin_level.tscn" id="2_ic0uy"]
 [ext_resource type="Texture2D" uid="uid://boiaq620ku36k" path="res://sprites/tileset/dirt.png" id="2_tlwt5"]
+[ext_resource type="PackedScene" uid="uid://2tgiwud7ely0" path="res://scenes/levels/surprise_plants.tscn" id="3_k3n1d"]
+[ext_resource type="PackedScene" uid="uid://dsv0i4ibrbrt6" path="res://scenes/levels/maze.tscn" id="4_2o6r5"]
 [ext_resource type="Texture2D" uid="uid://u7o8wjc25b5u" path="res://sprites/tileset/stone.png" id="4_aqk2v"]
 [ext_resource type="Texture2D" uid="uid://s7ggj3hqeay3" path="res://sprites/tileset/breakable_stone.png" id="5_036b0"]
+[ext_resource type="PackedScene" uid="uid://ckxekfijmtj6x" path="res://scenes/levels/shop.tscn" id="5_70uel"]
 [ext_resource type="Script" uid="uid://bdk8um2d22hpf" path="res://scripts/data_label.gd" id="6_dwbse"]
+[ext_resource type="PackedScene" uid="uid://casgfxb5ww4im" path="res://scenes/levels/boss.tscn" id="6_hiqwa"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_aqk2v"]
 resource_name = "Dirt"
@@ -136,6 +141,7 @@ sources/0 = SubResource("TileSetAtlasSource_036b0")
 
 [node name="TileMapManager" type="Node2D" parent="." unique_id=1490718295]
 script = ExtResource("1_dwbse")
+all_scenes = Array[PackedScene]([ExtResource("2_ic0uy"), ExtResource("3_k3n1d"), ExtResource("4_2o6r5"), ExtResource("5_70uel"), ExtResource("6_hiqwa")])
 metadata/_custom_type_script = "uid://bq0cvp0ifaviq"
 
 [node name="DirtLayer" type="TileMapLayer" parent="TileMapManager" unique_id=404541189]

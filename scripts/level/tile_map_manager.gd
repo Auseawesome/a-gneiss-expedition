@@ -67,7 +67,7 @@ func _ready() -> void:
 	load_level(load("res://scenes/levels/goblin_level.tscn"))
 	GlobalData.tile_map_manager = self
 
-
+@export var all_scenes: Array[PackedScene]
 
 func load_level(scene: PackedScene) -> void:
 	var rootNode: Node = scene.instantiate()
