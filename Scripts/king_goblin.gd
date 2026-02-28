@@ -6,7 +6,8 @@ var goblin_scene = preload("res://Scenes/Goblin.tscn")
 func _ready() -> void:
 	super._ready()
 	max_health = 150
-	current_health = 30
+	current_health = max_health
+
 func _physics_process(delta: float) -> void:
 	goblin_movement(delta)
 	if(current_health <= 125 && current_wave == 0):
