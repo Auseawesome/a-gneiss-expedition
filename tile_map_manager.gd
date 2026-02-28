@@ -65,17 +65,25 @@ func load_level(scene: PackedScene) -> void:
 	var rootNode: Node = scene.instantiate()
 	var floorTiles: TileMapLayer = rootNode.find_child("Floor")
 	
+	if (!is_instance_valid(GlobalData.player)):
+		GlobalData.player = preload("res://Scenes/Player.tscn").instantiate()
+		add_child(GlobalData.player)
+	
+	GlobalData.player.position = (rootNode.find_child("Spawn") as Node2D).position
+	
 	if (decorationMap != null):
 		decorationMap.queue_free()
 	
 	decorationMap = rootNode.find_child("Decorations")
 	decorationMap.position = Vector2(8, 8)
+	decorationMap.owner = null
 	decorationMap.reparent(self)
 	
 	for tile: Vector2i in floorTiles.get_used_cells():
 		set_tile_mat(tile, floorTiles.get_cell_source_id(tile) as FloorMaterial)
 	
-	floorTiles.queue_free()
+	rootNode.queue_free()
+	GlobalData.player.move_to_front()
 
 func get_tile_mat(pos: Vector2i):
 	if (tile_grid.has(pos)):
