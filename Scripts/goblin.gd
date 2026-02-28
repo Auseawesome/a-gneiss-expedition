@@ -2,7 +2,10 @@ extends CharacterBody2D
 
 enum State { PATROL, CHASE, ATTACK }
 var state = State.PATROL
-var speed = 150 # Increased speed so you can actually see it moving
+
+const MAX_SPEED = 200
+
+var acceleration = 8
 
 @onready var target = $"../Player"
 @onready var raycast = $RayCast2D
@@ -13,12 +16,19 @@ func _ready():
 
 func _physics_process(delta):
 	var direction = (target.global_position - global_position).normalized()
-	#raycast.target_position = direction * 300 
-	#raycast.force_raycast_update()
-	#if raycast.is_colliding():
-	velocity = direction * speed
+	
+	# Increase velocity in move direction
+	velocity += direction * acceleration
+	
+	# Clamp velocity to max speed
+	velocity = clamp(velocity.length(), 0, MAX_SPEED) * velocity.normalized()
+	
 	look_at(target.global_position)
-	var collision = move_and_collide(velocity * delta)
+	
+	# Check for collision and if it would collide, accelerate away
+	var collision = move_and_collide(velocity * delta, true)
 	if(collision):
-		velocity.bounce(collision.get_normal())
-		move_and_collide(velocity * delta * 20)
+		velocity += collision.get_normal() * acceleration * 100
+	
+	# Move goblin
+	move_and_collide(velocity * delta)
