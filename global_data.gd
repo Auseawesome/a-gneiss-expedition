@@ -1,6 +1,6 @@
 extends Node
 
-var player: Player;
+var player: Player
 var coins:=0:
 	set(value):
 		coins = value

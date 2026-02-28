@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://13ct00s5ay4h"]
 
-[ext_resource type="Script" uid="uid://doxmxuj04r2cr" path="res://Scripts/player.gd" id="1_kyqiw"]
+[ext_resource type="Script" uid="uid://0as6o0q6cnkd" path="res://Scripts/player.gd" id="1_kyqiw"]
 [ext_resource type="Texture2D" uid="uid://dv67ycakoa4e0" path="res://object_textures/player.png" id="2_kyqiw"]
 [ext_resource type="Script" uid="uid://bmeqmw5ocwn1" path="res://Scripts/tool.gd" id="3_dewec"]
 [ext_resource type="Texture2D" uid="uid://dx6ubu5prs47c" path="res://object_textures/sword.png" id="3_gntrk"]
@@ -15,7 +15,6 @@ height = 12.0
 
 [node name="Player" type="CharacterBody2D" unique_id=1355926605]
 script = ExtResource("1_kyqiw")
-metadata/_custom_type_script = "uid://doxmxuj04r2cr"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1247923362]
 rotation = -1.5707964

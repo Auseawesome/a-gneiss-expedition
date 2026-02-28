@@ -14,6 +14,8 @@ func _ready() -> void:
 	max_health = 250
 	bounce_acceleration = 100
 	
+	current_health = max_health
+	
 # This function must be connected to your Timer's 'timeout' signal!
 func _on_timer_timeout() -> void:
 	shoot()
