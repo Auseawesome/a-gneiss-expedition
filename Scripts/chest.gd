@@ -12,5 +12,5 @@ func _process(delta: float) -> void:
 func _on_body_entered(body):
 	if body is Player:
 		var player:Player =body
-		player.current_health+=5 
+		GlobalData.coins+=40 
 		queue_free()

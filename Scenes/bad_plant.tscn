@@ -1,3 +1,12 @@
 [gd_scene format=3 uid="uid://ce668wee87eta"]
 
-[node name="BadPlant" type="Node2D" unique_id=882379336]
+[ext_resource type="Script" uid="uid://bvicp8qogp5oe" path="res://Scripts/bad_plant.gd" id="1_hjuwa"]
+[ext_resource type="Texture2D" uid="uid://bswubkyt6par0" path="res://object_textures/goblin.png" id="2_uh8p5"]
+
+[node name="BadPlant" type="Area2D" unique_id=1238853578]
+script = ExtResource("1_hjuwa")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1477786103]
+texture = ExtResource("2_uh8p5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1114934694]
