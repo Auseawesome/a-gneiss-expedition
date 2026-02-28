@@ -2,6 +2,8 @@ class_name TileMapManager
 
 extends Node2D
 
+const OFFSET := Vector2(8, 8)
+
 enum TileFill {
 	ne = 0b0001,
 	nw = 0b0010,
@@ -69,13 +71,13 @@ func load_level(scene: PackedScene) -> void:
 		GlobalData.player = preload("res://Scenes/Player.tscn").instantiate()
 		add_child(GlobalData.player)
 	
-	GlobalData.player.position = (rootNode.find_child("Spawn") as Node2D).position
+	GlobalData.player.position = (rootNode.find_child("Spawn") as Node2D).position + OFFSET
 	
 	if (decorationMap != null):
 		decorationMap.queue_free()
 	
 	decorationMap = rootNode.find_child("Decorations")
-	decorationMap.position = Vector2(8, 8)
+	decorationMap.position = OFFSET
 	decorationMap.owner = null
 	decorationMap.reparent(self)
 	
