@@ -2,11 +2,12 @@
 
 [ext_resource type="Texture2D" uid="uid://boe13ckbbwhlo" path="res://tileset/decorations.png" id="1_8tauj"]
 [ext_resource type="PackedScene" uid="uid://ce668wee87eta" path="res://Scenes/bad_plant.tscn" id="2_qn2mi"]
-[ext_resource type="PackedScene" uid="uid://cbcldpubl0uhd" path="res://Scenes/chest.tscn" id="3_tni7p"]
+[ext_resource type="PackedScene" uid="uid://o83p0sw8shxv" path="res://Scenes/chest.tscn" id="3_tni7p"]
 [ext_resource type="PackedScene" uid="uid://ca1sxrbkl8yfc" path="res://Scenes/good_plant.tscn" id="4_nry30"]
 [ext_resource type="PackedScene" uid="uid://7fym02m2dn4p" path="res://Scenes/coins.tscn" id="5_ddoho"]
 [ext_resource type="PackedScene" uid="uid://y541mk6ieeac" path="res://Scenes/Goblin.tscn" id="6_u1pdm"]
 [ext_resource type="PackedScene" uid="uid://xfjk668ehd0l" path="res://Scenes/KingGoblin.tscn" id="7_qn2mi"]
+[ext_resource type="PackedScene" uid="uid://bei1kt0mqw4dm" path="res://Scenes/speed potion.tscn" id="8_tni7p"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yew5o"]
 texture = ExtResource("1_8tauj")
@@ -21,6 +22,7 @@ scenes/4/scene = ExtResource("5_ddoho")
 scenes/5/scene = ExtResource("6_u1pdm")
 scenes/6/scene = ExtResource("2_qn2mi")
 scenes/7/scene = ExtResource("7_qn2mi")
+scenes/8/scene = ExtResource("8_tni7p")
 
 [resource]
 sources/0 = SubResource("TileSetAtlasSource_yew5o")

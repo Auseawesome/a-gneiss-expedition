@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://r0u0xhpos5pe"]
+
+[ext_resource type="Script" uid="uid://0qcahey25gf5" path="res://Scripts/sword.gd" id="1_6wdhb"]
+[ext_resource type="Texture2D" uid="uid://dnnlfsq6pngio" path="res://object_textures/sword_upgrade.png" id="2_d6wag"]
+
+[node name="Sword" type="Area2D" unique_id=341729025]
+script = ExtResource("1_6wdhb")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=751918248]
+texture = ExtResource("2_d6wag")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=472362130]
