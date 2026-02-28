@@ -2,7 +2,7 @@ class_name Player
 
 extends CharacterBody2D
 
-var speed := 400
+var speed := 100
 
 var max_health := 50
 var current_health: int:
