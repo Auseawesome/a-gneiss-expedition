@@ -1,10 +1,10 @@
-[gd_scene format=3 uid="uid://brci5mjc3v0n7"]
+[gd_scene format=3 uid="uid://cr6l85823dqbx"]
 
 [ext_resource type="Script" uid="uid://b48ke8vq51grl" path="res://Scripts/Sorcerer.gd" id="1_at63c"]
-[ext_resource type="Texture2D" uid="uid://oodcaeciyqqp" path="res://icon.svg" id="1_v47t4"]
+[ext_resource type="Texture2D" uid="uid://bmvyve1vwp2sd" path="res://object_textures/sorcerer.png" id="2_at63c"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_at63c"]
-size = Vector2(93, 88)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qkygc"]
+height = 24.0
 
 [node name="Sorcerer" type="CharacterBody2D" unique_id=1485013380]
 collision_layer = 2
@@ -13,11 +13,11 @@ script = ExtResource("1_at63c")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1161341499]
 scale = Vector2(0.8046875, 0.8046875)
-texture = ExtResource("1_v47t4")
+texture = ExtResource("2_at63c")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1151591506]
-position = Vector2(-0.5, 0)
-shape = SubResource("RectangleShape2D_at63c")
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_qkygc")
 
 [node name="Timer" type="Timer" parent="." unique_id=1379494761]
 wait_time = 4.0

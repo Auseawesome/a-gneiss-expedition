@@ -1,20 +1,19 @@
-extends CharacterBody2D
+extends Goblin
 
 # 1. Rename the preload so it doesn't conflict with the variable name 'bullet'
 @onready var bullet_scene = preload("res://Scenes/blast.tscn")
 @onready var timer:Timer = $Timer
-var speed = 10.0
+
 func _physics_process(_delta: float) -> void:
-	if GlobalData.player:
-		# Move toward player
-		var dir_to_player = global_position.direction_to(GlobalData.player.global_position)
-		velocity = dir_to_player * speed
-		move_and_slide()
-		
-		# Face the player
-		look_at(GlobalData.player.global_position)
+	goblin_movement(_delta)
+
 func _ready() -> void:
 	timer.start()
+	max_speed = 10
+	acceleration = 1
+	max_health = 250
+	bounce_acceleration = 100
+	
 # This function must be connected to your Timer's 'timeout' signal!
 func _on_timer_timeout() -> void:
 	shoot()
