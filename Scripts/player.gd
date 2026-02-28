@@ -5,7 +5,13 @@ extends CharacterBody2D
 var speed := 400
 
 var max_health := 50
-var current_health: int
+var current_health: int:
+	set(value):
+		current_health=clamp(value,0,max_health)
+		#if (value<0):
+			
+	
+	
 var strength := 10
 
 func _ready() -> void:
