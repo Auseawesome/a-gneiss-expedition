@@ -1,13 +1,14 @@
 [gd_scene format=3 uid="uid://4lindkx7pidw"]
 
 [ext_resource type="PackedScene" uid="uid://13ct00s5ay4h" path="res://Scenes/Player.tscn" id="1_ko2s7"]
-[ext_resource type="PackedScene" path="res://Scenes/Goblin.tscn" id="2_gxb1y"]
+[ext_resource type="PackedScene" uid="uid://y541mk6ieeac" path="res://Scenes/Goblin.tscn" id="2_gxb1y"]
+[ext_resource type="PackedScene" uid="uid://xfjk668ehd0l" path="res://Scenes/KingGoblin.tscn" id="3_0dy5s"]
 
 [node name="Node2D" type="Node2D" unique_id=366496985]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=381550018]
 position = Vector2(271, 27)
-zoom = Vector2(0.3, 0.3)
+zoom = Vector2(4, 4)
 
 [node name="Goblin" parent="." unique_id=907832722 instance=ExtResource("2_gxb1y")]
 position = Vector2(100, 500)
@@ -16,3 +17,5 @@ position = Vector2(100, 500)
 position = Vector2(1000, 0)
 
 [node name="Player" parent="." unique_id=1113735203 instance=ExtResource("1_ko2s7")]
+
+[node name="KingGoblin" parent="." unique_id=739820165 instance=ExtResource("3_0dy5s")]
