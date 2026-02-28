@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://b6hogucxlje0v"]
+[gd_scene format=3 uid="uid://4lindkx7pidw"]
 
 [ext_resource type="PackedScene" uid="uid://13ct00s5ay4h" path="res://Scenes/Player.tscn" id="1_ko2s7"]
 [ext_resource type="PackedScene" uid="uid://y541mk6ieeac" path="res://Scenes/Goblin.tscn" id="2_gxb1y"]
