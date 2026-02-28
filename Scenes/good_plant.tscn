@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://ca1sxrbkl8yfc"]
+
+[ext_resource type="Texture2D" uid="uid://bswubkyt6par0" path="res://object_textures/goblin.png" id="1_7awtl"]
+[ext_resource type="Script" uid="uid://y7rmiiauuep4" path="res://Scripts/good_plant.gd" id="1_yjy5u"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4v6t0"]
+radius = 6.0
+height = 14.0
+
+[node name="Area2D" type="Area2D" unique_id=97141981]
+script = ExtResource("1_yjy5u")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=190107394]
+texture = ExtResource("1_7awtl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1104516035]
+shape = SubResource("CapsuleShape2D_4v6t0")
