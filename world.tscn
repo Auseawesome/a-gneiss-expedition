@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://boiaq620ku36k" path="res://tileset/dirt.png" id="2_tlwt5"]
 [ext_resource type="Texture2D" uid="uid://u7o8wjc25b5u" path="res://tileset/stone.png" id="4_aqk2v"]
 [ext_resource type="Texture2D" uid="uid://s7ggj3hqeay3" path="res://tileset/breakable_stone.png" id="5_036b0"]
+[ext_resource type="Script" uid="uid://bdk8um2d22hpf" path="res://data_label.gd" id="6_dwbse"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_aqk2v"]
 resource_name = "Dirt"
@@ -131,7 +132,7 @@ physics_layer_0/collision_layer = 3
 physics_layer_0/collision_mask = 3
 sources/0 = SubResource("TileSetAtlasSource_036b0")
 
-[node name="Node2D" type="Node2D" unique_id=1753542209]
+[node name="Node2D" type="Node" unique_id=111583318]
 
 [node name="TileMapManager" type="Node2D" parent="." unique_id=1490718295]
 script = ExtResource("1_fj7yv")
@@ -150,3 +151,11 @@ navigation_enabled = false
 [node name="CrackedLayer" type="TileMapLayer" parent="TileMapManager" unique_id=1989913353]
 tile_set = SubResource("TileSet_dwbse")
 navigation_enabled = false
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=938915774]
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=411680579]
+offset_right = 56.0
+offset_bottom = 23.0
+text = "Health:"
+script = ExtResource("6_dwbse")
