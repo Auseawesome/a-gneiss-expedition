@@ -1,12 +1,16 @@
-extends Node
+extends Area2D
 
-var player: CharacterBody2D;
-var coins:=0
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	body_entered.connect(_on_body_entered)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+func _on_body_entered(body):
+	if body is Player:
+		var player:Player =body
+		GlobalData.coins+=5
+		queue_free()

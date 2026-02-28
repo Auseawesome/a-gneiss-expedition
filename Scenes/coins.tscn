@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://b5n0in2l0uwqe"]
+
+[ext_resource type="Script" uid="uid://cgdq2fp22v273" path="res://Scripts/coins.gd" id="1_ojwyu"]
+[ext_resource type="Texture2D" uid="uid://bswubkyt6par0" path="res://object_textures/goblin.png" id="2_m2shm"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nolx5"]
+
+[node name="Coins" type="Area2D" unique_id=2033793259]
+script = ExtResource("1_ojwyu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=809897395]
+shape = SubResource("CircleShape2D_nolx5")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1737247518]
+texture = ExtResource("2_m2shm")
