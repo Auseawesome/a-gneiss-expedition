@@ -1,15 +1,17 @@
-[gd_scene format=3 uid="uid://o83p0sw8shxv"]
+[gd_scene format=3 uid="uid://cbcldpubl0uhd"]
 
-[ext_resource type="Script" uid="uid://bmv8rng1c21up" path="res://Scripts/chest.gd" id="1_cjfl1"]
-[ext_resource type="Texture2D" uid="uid://bswubkyt6par0" path="res://object_textures/goblin.png" id="2_bagqn"]
+[ext_resource type="Script" path="res://Scripts/chest.gd" id="1_cjfl1"]
+[ext_resource type="Texture2D" uid="uid://bjjtwiyubuvoc" path="res://object_textures/chest.png" id="2_cjfl1"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_pmguq"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bagqn"]
+size = Vector2(12, 10)
 
 [node name="Chest" type="Area2D" unique_id=1236994101]
 script = ExtResource("1_cjfl1")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=205742141]
-texture = ExtResource("2_bagqn")
+texture = ExtResource("2_cjfl1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=295246333]
-shape = SubResource("CircleShape2D_pmguq")
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_bagqn")
