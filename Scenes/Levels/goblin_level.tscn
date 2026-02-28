@@ -6,6 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://b0oh1fwvuhno5" path="res://tileset/world_border.png" id="4_e5b4w"]
 [ext_resource type="Texture2D" uid="uid://c6ptqrm1pd3ve" path="res://tileset/grassy_stone.png" id="5_j44pi"]
 [ext_resource type="Texture2D" uid="uid://boe13ckbbwhlo" path="res://tileset/decorations.png" id="6_17uc2"]
+[ext_resource type="PackedScene" uid="uid://y541mk6ieeac" path="res://Scenes/Goblin.tscn" id="7_wtlc3"]
+[ext_resource type="PackedScene" uid="uid://ca1sxrbkl8yfc" path="res://Scenes/good_plant.tscn" id="8_e5b4w"]
+[ext_resource type="PackedScene" uid="uid://cbcldpubl0uhd" path="res://Scenes/chest.tscn" id="9_j44pi"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tlwt5"]
 texture = ExtResource("1_ekxmk")
@@ -80,8 +83,15 @@ sources/4 = SubResource("TileSetAtlasSource_ioo17")
 texture = ExtResource("6_17uc2")
 0:0/0 = 0
 
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_e5b4w"]
+resource_name = "Objects"
+scenes/1/scene = ExtResource("7_wtlc3")
+scenes/2/scene = ExtResource("8_e5b4w")
+scenes/3/scene = ExtResource("9_j44pi")
+
 [sub_resource type="TileSet" id="TileSet_e5b4w"]
 sources/0 = SubResource("TileSetAtlasSource_17uc2")
+sources/1 = SubResource("TileSetScenesCollectionSource_e5b4w")
 
 [node name="Node" type="Node" unique_id=1963909744]
 
