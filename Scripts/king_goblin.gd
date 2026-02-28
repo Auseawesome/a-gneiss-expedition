@@ -1,40 +1,21 @@
-extends CharacterBody2D
+class_name KingGoblin
 
-enum State { PATROL, CHASE, ATTACK }
-var state = State.PATROL
-var health = 30
-var first_wave_done: bool = false;
-var second_wave_done: bool = false;
-var third_wave_done: bool = false;
-var goblin_link = preload("res://Scenes/Goblin.tscn")
-const MAX_SPEED = 200
-var acceleration = 8
-@onready var raycast = $RayCast2D
+extends Goblin
 
-func _ready():
-	raycast.enabled = true
-	raycast.add_exception(self)
+var current_wave = 0;
+var goblin_scene = preload("res://Scripts/goblin.gd")
 
-func _physics_process(delta):
-	var direction = (GlobalData.player.global_position - global_position).normalized()
+func _ready() -> void:
+	super._ready()
 	
-	# Increase velocity in move direction
-	velocity += direction * acceleration
+	max_health = 150
+	current_health = max_health
+
+func _physics_process(delta: float) -> void:
+	goblin_movement(delta)
 	
-	# Clamp velocity to max speed
-	velocity = clamp(velocity.length(), 0, MAX_SPEED) * velocity.normalized()
-	
-	look_at(GlobalData.player.global_position)
-	if(health < 40 && first_wave_done != true):
+	if(current_health <= 100 && current_wave == 0):
 		for i in range(2):
-			var instance = goblin_link.instantiate()
+			var instance = goblin_scene.instantiate()
 			get_parent().add_child(instance)
-			first_wave_done = true;
-	# Check for collision and if it would collide, accelerate away
-	var collision = move_and_collide(velocity * delta, true)
-	if(collision):
-		velocity += collision.get_normal() * acceleration * 100
-	
-
-	# Move goblin
-	move_and_collide(velocity * delta)
+			current_wave == 1;

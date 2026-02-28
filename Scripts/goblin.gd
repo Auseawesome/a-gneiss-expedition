@@ -1,26 +1,34 @@
+class_name Goblin
+
 extends CharacterBody2D
 
 enum State { PATROL, CHASE, ATTACK }
 var state = State.PATROL
 
-const MAX_SPEED = 200
-
+var max_health = 30
+var max_speed = 200
 var acceleration = 8
 
-@onready var raycast = $RayCast2D
+var current_health;
 
-func _ready():
-	raycast.enabled = true
-	raycast.add_exception(self)
+func _ready() -> void:
+	max_health = 30
+	max_speed = 200
+	acceleration = 8
+	
+	current_health = max_health
 
-func _physics_process(delta):
+func _physics_process(delta: float) -> void:
+	goblin_movement(delta)
+
+func goblin_movement(delta:float) -> void:
 	var direction = (GlobalData.player.global_position - global_position).normalized()
 	
 	# Increase velocity in move direction
 	velocity += direction * acceleration
 	
 	# Clamp velocity to max speed
-	velocity = clamp(velocity.length(), 0, MAX_SPEED) * velocity.normalized()
+	velocity = clamp(velocity.length(), 0, max_speed) * velocity.normalized()
 	
 	look_at(GlobalData.player.global_position)
 	

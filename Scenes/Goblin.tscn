@@ -7,8 +7,9 @@
 radius = 5.0
 height = 12.0
 
-[node name="Goblin" type="CharacterBody2D" unique_id=907832722]
+[node name="Goblin" type="CharacterBody2D" unique_id=284373343]
 script = ExtResource("1_wqigr")
+metadata/_custom_type_script = "uid://vqekr1w8btas"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1247923362]
 rotation = -1.5707964
@@ -16,5 +17,3 @@ texture = ExtResource("2_wqigr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1886082092]
 shape = SubResource("CapsuleShape2D_128dr")
-
-[node name="RayCast2D" type="RayCast2D" parent="." unique_id=738826548]
