@@ -1,6 +1,6 @@
 extends Node
 
-var player: CharacterBody2D
+var player: Player;
 var coins:=0
 var tile_map_manager: TileMapManager
 
