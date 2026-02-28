@@ -3,13 +3,13 @@ class_name Goblin
 extends CharacterBody2D
 
 enum State { PATROL, CHASE, ATTACK }
-var state = State.PATROL
+var state := State.PATROL
 
-var max_health = 30
-var max_speed = 200
-var acceleration = 8
+var max_health: int
+var max_speed: int
+var acceleration: int
 
-var current_health;
+var current_health: int
 
 func _ready() -> void:
 	max_health = 30
