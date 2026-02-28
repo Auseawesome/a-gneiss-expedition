@@ -1,8 +1,9 @@
 class_name KingGoblin
 extends Goblin
-var current_wave = 0;
-var goblin_scene = preload("res://scenes/characters/goblin.tscn")
-var spawn_radius:float = 5.0
+var current_wave = 0
+@export var goblin_scene: PackedScene
+var spawn_radius: float = 5.0
+
 func _ready() -> void:
 	super._ready()
 	max_health = 150

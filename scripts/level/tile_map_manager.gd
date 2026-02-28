@@ -64,17 +64,19 @@ var tile_grid: Dictionary[Vector2i, FloorMaterial] = {}
 var decorationMap: TileMapLayer
 
 func _ready() -> void:
-	load_level(load("res://scenes/levels/goblin_level.tscn"))
+	load_level(all_scenes[0])
 	GlobalData.tile_map_manager = self
 
 @export var all_scenes: Array[PackedScene]
+
+@export var player_scene: PackedScene
 
 func load_level(scene: PackedScene) -> void:
 	var rootNode: Node = scene.instantiate()
 	var floorTiles: TileMapLayer = rootNode.find_child("Floor")
 	
 	if (!is_instance_valid(GlobalData.player)):
-		GlobalData.player = preload("res://scenes/characters/player.tscn").instantiate()
+		GlobalData.player = player_scene.instantiate()
 		add_child(GlobalData.player)
 	
 	GlobalData.player.position = (rootNode.find_child("Spawn") as Node2D).position + OFFSET

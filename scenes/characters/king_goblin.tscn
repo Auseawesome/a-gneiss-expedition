@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://s23ywov6dx43" path="res://scripts/character/king_goblin.gd" id="1_1gtwo"]
 [ext_resource type="Texture2D" uid="uid://duv0eysodsn4j" path="res://sprites/character/king_goblin.png" id="2_1gtwo"]
+[ext_resource type="PackedScene" uid="uid://y541mk6ieeac" path="res://scenes/characters/goblin.tscn" id="2_hrh8a"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_128dr"]
 radius = 6.0
@@ -11,6 +12,7 @@ height = 16.0
 collision_layer = 3
 collision_mask = 3
 script = ExtResource("1_1gtwo")
+goblin_scene = ExtResource("2_hrh8a")
 metadata/_custom_type_script = "uid://s23ywov6dx43"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1247923362]

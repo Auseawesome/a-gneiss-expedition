@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://ckxekfijmtj6x" path="res://scenes/levels/shop.tscn" id="5_70uel"]
 [ext_resource type="Script" uid="uid://bdk8um2d22hpf" path="res://scripts/data_label.gd" id="6_dwbse"]
 [ext_resource type="PackedScene" uid="uid://casgfxb5ww4im" path="res://scenes/levels/boss.tscn" id="6_hiqwa"]
+[ext_resource type="PackedScene" uid="uid://13ct00s5ay4h" path="res://scenes/characters/player.tscn" id="7_k3n1d"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_aqk2v"]
 resource_name = "Dirt"
@@ -142,6 +143,7 @@ sources/0 = SubResource("TileSetAtlasSource_036b0")
 [node name="TileMapManager" type="Node2D" parent="." unique_id=1490718295]
 script = ExtResource("1_dwbse")
 all_scenes = Array[PackedScene]([ExtResource("2_ic0uy"), ExtResource("3_k3n1d"), ExtResource("4_2o6r5"), ExtResource("5_70uel"), ExtResource("6_hiqwa")])
+player_scene = ExtResource("7_k3n1d")
 metadata/_custom_type_script = "uid://bq0cvp0ifaviq"
 
 [node name="DirtLayer" type="TileMapLayer" parent="TileMapManager" unique_id=404541189]
