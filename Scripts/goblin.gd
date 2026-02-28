@@ -21,7 +21,7 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	goblin_movement(delta)
 
-func goblin_movement(delta:float) -> void:
+func goblin_movement(delta: float) -> void:
 	var direction = (GlobalData.player.global_position - global_position).normalized()
 	
 	# Increase velocity in move direction
