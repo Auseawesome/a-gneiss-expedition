@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cjgv6mthibmry"]
 
-[ext_resource type="Script" uid="uid://bnayf6bsjudyr" path="res://Scripts/boss_heal.gd" id="1_ilhwv"]
+[ext_resource type="Script" uid="uid://bnayf6bsjudyr" path="res://scripts/pickups/boss_heal.gd" id="1_ilhwv"]
 [ext_resource type="Texture2D" uid="uid://d26d2otrbfmkg" path="res://sprites/pickup/good_plant.png" id="2_wfmxw"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vwgkv"]

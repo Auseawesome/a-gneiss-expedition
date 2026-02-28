@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://cgd1t4cil3utq"]
 
+[ext_resource type="Script" uid="uid://bq0cvp0ifaviq" path="res://scripts/level/tile_map_manager.gd" id="1_dwbse"]
 [ext_resource type="Texture2D" uid="uid://c13q61vq7aro1" path="res://sprites/tileset/grass.png" id="1_f3sb7"]
-[ext_resource type="Script" uid="uid://bq0cvp0ifaviq" path="res://tile_map_manager.gd" id="1_fj7yv"]
 [ext_resource type="Texture2D" uid="uid://boiaq620ku36k" path="res://sprites/tileset/dirt.png" id="2_tlwt5"]
 [ext_resource type="Texture2D" uid="uid://u7o8wjc25b5u" path="res://sprites/tileset/stone.png" id="4_aqk2v"]
 [ext_resource type="Texture2D" uid="uid://s7ggj3hqeay3" path="res://sprites/tileset/breakable_stone.png" id="5_036b0"]
-[ext_resource type="Script" uid="uid://bdk8um2d22hpf" path="res://data_label.gd" id="6_dwbse"]
+[ext_resource type="Script" uid="uid://bdk8um2d22hpf" path="res://scripts/data_label.gd" id="6_dwbse"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_aqk2v"]
 resource_name = "Dirt"
@@ -135,7 +135,7 @@ sources/0 = SubResource("TileSetAtlasSource_036b0")
 [node name="Node2D" type="Node" unique_id=111583318]
 
 [node name="TileMapManager" type="Node2D" parent="." unique_id=1490718295]
-script = ExtResource("1_fj7yv")
+script = ExtResource("1_dwbse")
 metadata/_custom_type_script = "uid://bq0cvp0ifaviq"
 
 [node name="DirtLayer" type="TileMapLayer" parent="TileMapManager" unique_id=404541189]

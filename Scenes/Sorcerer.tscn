@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cr6l85823dqbx"]
 
-[ext_resource type="Script" uid="uid://x26new5a4psn" path="res://Scripts/Sorcerer.gd" id="1_at63c"]
+[ext_resource type="Script" uid="uid://x26new5a4psn" path="res://scripts/character/sorcerer.gd" id="1_at63c"]
 [ext_resource type="Texture2D" uid="uid://bmvyve1vwp2sd" path="res://sprites/character/sorcerer.png" id="2_at63c"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qkygc"]

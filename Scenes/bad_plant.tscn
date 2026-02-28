@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ce668wee87eta"]
 
-[ext_resource type="Script" uid="uid://djjwklyvh3gnw" path="res://Scripts/bad_plant.gd" id="1_hjuwa"]
+[ext_resource type="Script" uid="uid://djjwklyvh3gnw" path="res://scripts/pickups/bad_plant.gd" id="1_hjuwa"]
 [ext_resource type="Texture2D" uid="uid://dq6qh4rxwna4w" path="res://sprites/pickup/bad_plant.png" id="2_hjuwa"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4v6t0"]

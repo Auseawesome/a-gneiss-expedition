@@ -3,8 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://boiaq620ku36k" path="res://sprites/tileset/dirt.png" id="1_iofsi"]
 [ext_resource type="Texture2D" uid="uid://c13q61vq7aro1" path="res://sprites/tileset/grass.png" id="2_7dhb0"]
 [ext_resource type="Texture2D" uid="uid://u7o8wjc25b5u" path="res://sprites/tileset/stone.png" id="3_2yteh"]
-[ext_resource type="Texture2D" uid="uid://b0oh1fwvuhno5" path="res://sprites/tileset/world_border.png" id="4_nn0uo"]
-[ext_resource type="Texture2D" uid="uid://c6ptqrm1pd3ve" path="res://sprites/tileset/grassy_stone.png" id="5_v6qhb"]
+[ext_resource type="Texture2D" uid="uid://b0oh1fwvuhno5" path="res://sprites/editor_previews/world_border.png" id="4_nn0uo"]
+[ext_resource type="Texture2D" uid="uid://c6ptqrm1pd3ve" path="res://sprites/editor_previews/grassy_stone.png" id="5_v6qhb"]
 [ext_resource type="TileSet" uid="uid://8uxxi4v3duqx" path="res://tilesets/object_tile_set.tres" id="6_7dhb0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tlwt5"]

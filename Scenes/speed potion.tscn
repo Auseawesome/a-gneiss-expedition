@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bei1kt0mqw4dm"]
 
-[ext_resource type="Script" uid="uid://i78esdx8txbh" path="res://Scripts/speed_potion.gd" id="1_pnxpp"]
+[ext_resource type="Script" uid="uid://i78esdx8txbh" path="res://scripts/pickups/speed_potion.gd" id="1_pnxpp"]
 [ext_resource type="Texture2D" uid="uid://baf30of06o3og" path="res://sprites/tool/pickaxe.png" id="2_1ilf7"]
 
 [node name="SpeedPotion" type="Area2D" unique_id=130214550]

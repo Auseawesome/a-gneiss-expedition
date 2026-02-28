@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b0oh1fwvuhno5"
-path="res://.godot/imported/world_border.png-12ee01ce29956929e53ecb0c35239704.ctex"
+uid="uid://c6ptqrm1pd3ve"
+path="res://.godot/imported/grassy_stone.png-de7dfbf3f29eee85029db9a04b0a39bc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/tileset/world_border.png"
-dest_files=["res://.godot/imported/world_border.png-12ee01ce29956929e53ecb0c35239704.ctex"]
+source_file="res://sprites/editor_previews/grassy_stone.png"
+dest_files=["res://.godot/imported/grassy_stone.png-de7dfbf3f29eee85029db9a04b0a39bc.ctex"]
 
 [params]
 

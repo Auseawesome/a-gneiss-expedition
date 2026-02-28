@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://13ct00s5ay4h"]
 
-[ext_resource type="Script" uid="uid://0as6o0q6cnkd" path="res://Scripts/player.gd" id="1_kyqiw"]
+[ext_resource type="Script" uid="uid://0as6o0q6cnkd" path="res://scripts/character/player/player.gd" id="1_kyqiw"]
 [ext_resource type="Texture2D" uid="uid://dv67ycakoa4e0" path="res://sprites/character/player.png" id="2_kyqiw"]
-[ext_resource type="Script" uid="uid://bmeqmw5ocwn1" path="res://Scripts/tool.gd" id="3_dewec"]
+[ext_resource type="Script" uid="uid://bmeqmw5ocwn1" path="res://scripts/character/player/tool.gd" id="3_dewec"]
 [ext_resource type="Texture2D" uid="uid://dx6ubu5prs47c" path="res://sprites/tool/sword.png" id="3_gntrk"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_128dr"]

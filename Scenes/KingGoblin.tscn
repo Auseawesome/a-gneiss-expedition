@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://xfjk668ehd0l"]
 
-[ext_resource type="Script" uid="uid://s23ywov6dx43" path="res://Scripts/king_goblin.gd" id="1_1gtwo"]
+[ext_resource type="Script" uid="uid://s23ywov6dx43" path="res://scripts/character/king_goblin.gd" id="1_1gtwo"]
 [ext_resource type="Texture2D" uid="uid://duv0eysodsn4j" path="res://sprites/character/king_goblin.png" id="2_1gtwo"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_128dr"]
