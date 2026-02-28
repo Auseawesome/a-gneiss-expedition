@@ -1,47 +1,30 @@
-#extends CharacterBody2D
-#
-#enum State {
-	#PATROL,
-	#CHASE,
-	#ATTACK
-#}
-#
-#var state = State.PATROL
-#var speed = 100
-#var target = null
-#
-#func _process(delta):
-	#match state:
-		#State.PATROL:
-			#patrol()
-			#if is_player_near():
-				#state = State.CHASE
-		#State.CHASE:
-			#chase()
-			#if is_in_attack_range():
-				#state = State.ATTACK
-		#State.ATTACK:
-			#attack()
-			#if !is_in_attack_range():
-				#state = State.CHASE
-#
-#func patrol():
-	## Patrol logic here
-	#pass
-#func chase():
-	#if target:
-		#var path = get_node("../Navigation2D").get_simple_path(position, target.position)
-		#if path.size() > 1:
-			#move_and_slide()
-#
-#func attack():
-	## Attack logic here
-	#pass
-#
-#func is_player_near():
-	## Logic to check if the player is nearby
-	#return false
-#
-#func is_in_attack_range():
-	## Logic to check if the player is within attack range
-	#return false
+extends CharacterBody2D
+
+enum State { PATROL, CHASE, ATTACK }
+var state = State.PATROL
+var speed = 150 # Increased speed so you can actually see it moving
+
+@onready var target = $"../Player"
+@onready var raycast = $RayCast2D
+
+func _ready():
+	raycast.enabled = true
+	raycast.add_exception(self)
+
+func _physics_process(_delta):
+	# 1. Safety check
+	if not target: return
+
+	# 2. Update RayCast BEFORE checking collision
+	var direction = (target.global_position - global_position).normalized()
+	raycast.target_position = direction * 300 # Vision range
+	raycast.force_raycast_update()
+
+	# 3. Decision Logic
+	if raycast.is_colliding() and raycast.get_collider() == target:
+		velocity = direction * speed
+		look_at(target.global_position)
+		move_and_slide()
+	else:
+		velocity = Vector2.ZERO
+		# Optional: print(raycast.get_collider().name if raycast.is_colliding() else "Nothing")
