@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dch1jx5jc1c63"]
+
+[ext_resource type="Script" uid="uid://c7ahd636tdlpe" path="res://Scripts/next_level.gd" id="1_ccgpq"]
+[ext_resource type="Texture2D" uid="uid://b0oh1fwvuhno5" path="res://tileset/world_border.png" id="2_7u8d8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eq5fm"]
+
+[node name="NextLevel" type="Area2D" unique_id=1671227422]
+script = ExtResource("1_ccgpq")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1273445131]
+texture = ExtResource("2_7u8d8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1357366577]
+shape = SubResource("RectangleShape2D_eq5fm")

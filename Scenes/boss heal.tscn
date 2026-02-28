@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cjgv6mthibmry"]
+
+[ext_resource type="Script" uid="uid://bnayf6bsjudyr" path="res://Scripts/boss_heal.gd" id="1_ilhwv"]
+[ext_resource type="Texture2D" uid="uid://d26d2otrbfmkg" path="res://object_textures/good_plant.png" id="2_wfmxw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vwgkv"]
+
+[node name="BossHeal" type="Area2D" unique_id=327299579]
+script = ExtResource("1_ilhwv")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=79071094]
+texture = ExtResource("2_wfmxw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2076362751]
+shape = SubResource("CircleShape2D_vwgkv")
+
+[node name="Timer" type="Timer" parent="." unique_id=158818517]
+wait_time = 5.0
+one_shot = true

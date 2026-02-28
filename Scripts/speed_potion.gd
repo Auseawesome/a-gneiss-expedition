@@ -6,6 +6,7 @@ func _input(event):
 
 func do_action():
 	GlobalData.coins-=100
+	GlobalData.player.speed*=1.5
 	queue_free()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

@@ -5,12 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://u7o8wjc25b5u" path="res://tileset/stone.png" id="3_0wost"]
 [ext_resource type="Texture2D" uid="uid://b0oh1fwvuhno5" path="res://tileset/world_border.png" id="4_to1kv"]
 [ext_resource type="Texture2D" uid="uid://c6ptqrm1pd3ve" path="res://tileset/grassy_stone.png" id="5_54nwv"]
-[ext_resource type="Texture2D" uid="uid://boe13ckbbwhlo" path="res://tileset/decorations.png" id="6_kyde2"]
-[ext_resource type="PackedScene" uid="uid://ce668wee87eta" path="res://Scenes/bad_plant.tscn" id="7_7ho5q"]
-[ext_resource type="PackedScene" uid="uid://o83p0sw8shxv" path="res://Scenes/chest.tscn" id="8_c76lb"]
-[ext_resource type="PackedScene" uid="uid://ca1sxrbkl8yfc" path="res://Scenes/good_plant.tscn" id="9_qkfdo"]
-[ext_resource type="PackedScene" uid="uid://b5n0in2l0uwqe" path="res://Scenes/coins.tscn" id="10_b22jv"]
-[ext_resource type="PackedScene" uid="uid://y541mk6ieeac" path="res://Scenes/Goblin.tscn" id="11_hq2uc"]
+[ext_resource type="TileSet" uid="uid://8uxxi4v3duqx" path="res://object_textures/object_tile_set.tres" id="6_f5gop"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tlwt5"]
 texture = ExtResource("1_t0awj")
@@ -81,23 +76,6 @@ sources/2 = SubResource("TileSetAtlasSource_pkg7o")
 sources/3 = SubResource("TileSetAtlasSource_gbfbk")
 sources/4 = SubResource("TileSetAtlasSource_ioo17")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yew5o"]
-texture = ExtResource("6_kyde2")
-0:0/0 = 0
-
-[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_4ca8u"]
-resource_name = "objects"
-scenes/1/scene = ExtResource("7_7ho5q")
-scenes/2/scene = ExtResource("8_c76lb")
-scenes/3/scene = ExtResource("9_qkfdo")
-scenes/4/scene = ExtResource("10_b22jv")
-scenes/5/scene = ExtResource("11_hq2uc")
-scenes/6/scene = ExtResource("7_7ho5q")
-
-[sub_resource type="TileSet" id="TileSet_0i23l"]
-sources/0 = SubResource("TileSetAtlasSource_yew5o")
-sources/1 = SubResource("TileSetScenesCollectionSource_4ca8u")
-
 [node name="Node2" type="Node" unique_id=1939082038]
 
 [node name="Floor" type="TileMapLayer" parent="." unique_id=1519024636]
@@ -106,7 +84,7 @@ tile_set = SubResource("TileSet_dwbse")
 
 [node name="Decorations" type="TileMapLayer" parent="." unique_id=1465486832]
 tile_map_data = PackedByteArray("AAAEABEAAQAAAAAAAgAHABwAAQAAAAAABAAFABsAAQAAAAAABQAKAAsAAQAAAAAAAQA=")
-tile_set = SubResource("TileSet_0i23l")
+tile_set = ExtResource("6_f5gop")
 
 [node name="Spawn" type="Node2D" parent="." unique_id=498253959]
 position = Vector2(139, 249)

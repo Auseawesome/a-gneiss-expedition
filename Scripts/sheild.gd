@@ -8,6 +8,8 @@ func _input(event):
 
 func do_action():
 	GlobalData.coins-=100
+	GlobalData.maxhealth+=10
+	GlobalData.health+=10
 	queue_free()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
