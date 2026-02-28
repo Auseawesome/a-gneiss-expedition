@@ -8,6 +8,7 @@ var state := State.PATROL
 var max_health: int
 var max_speed: int
 var acceleration: int
+var damage: int
 
 var current_health: int
 
@@ -15,6 +16,7 @@ func _ready() -> void:
 	max_health = 30
 	max_speed = 200
 	acceleration = 8
+	damage = 5
 	
 	current_health = max_health
 
@@ -36,6 +38,11 @@ func goblin_movement(delta: float) -> void:
 	var collision = move_and_collide(velocity * delta, true)
 	if(collision):
 		velocity += collision.get_normal() * acceleration * 100
+		
+		if (collision.get_collider() is Player):
+			var player = collision.get_collider()
+			
+			# Code here
 	
 	# Move goblin
 	move_and_collide(velocity * delta)
