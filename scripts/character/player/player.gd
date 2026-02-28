@@ -10,7 +10,7 @@ var current_health: int:
 		current_health=clamp(value,0,max_health)
 		if (value<0):
 			var allChildren := get_tree().root.get_children()
-			var game_over = preload("res://Scenes/game over.tscn")
+			var game_over = preload("res://scenes/menus/game_over.tscn")
 			get_tree().root.add_child(game_over.instantiate())
 			for child in allChildren:
 				queue_free()

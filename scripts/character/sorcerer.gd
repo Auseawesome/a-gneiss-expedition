@@ -1,7 +1,7 @@
 extends Goblin
 
 # 1. Rename the preload so it doesn't conflict with the variable name 'bullet'
-@onready var bullet_scene = preload("res://Scenes/blast.tscn")
+@onready var bullet_scene = preload("res://scenes/projectiles/blast.tscn")
 @onready var timer:Timer = $Timer
 
 func _physics_process(_delta: float) -> void:

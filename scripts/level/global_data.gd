@@ -12,11 +12,11 @@ var coins:=0:
 var tile_map_manager: TileMapManager
 
 var all_scenes: Array[PackedScene] = [
-	load("res://Scenes/Levels/goblin_level.tscn"),
-	load("res://Scenes/Levels/surprise plants.tscn"),
-	load("res://Scenes/Levels/mave.tscn"),
-	load("res://Scenes/Levels/shop.tscn"),
-	load("res://Scenes/Levels/boss.tscn")
+	load("res://scenes/levels/goblin_level.tscn"),
+	load("res://scenes/levels/surprise_plants.tscn"),
+	load("res://scenes/levels/maze.tscn"),
+	load("res://scenes/levels/shop.tscn"),
+	load("res://scenes/levels/boss.tscn")
 ]
 
 var current_scene := 0
