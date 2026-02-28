@@ -9,14 +9,17 @@ var max_health: int
 var max_speed: int
 var acceleration: int
 var damage: int
+var bounce_acceleration: int
 
 var current_health: int
 
 func _ready() -> void:
 	max_health = 30
-	max_speed = 200
+	max_speed = 100
 	acceleration = 8
 	damage = 5
+	bounce_acceleration = 400
+	
 	current_health = max_health
 
 func _physics_process(delta: float) -> void:
@@ -35,7 +38,7 @@ func goblin_movement(delta: float) -> void:
 	# Check for collision and if it would collide, accelerate away
 	var collision = move_and_collide(velocity * delta, true)
 	if(collision):
-		velocity += collision.get_normal() * acceleration * 100
+		velocity += collision.get_normal() * bounce_acceleration
 		
 		if (collision.get_collider() is Player):
 			var player: Player = collision.get_collider()
