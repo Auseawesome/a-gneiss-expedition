@@ -1,20 +1,20 @@
 [gd_scene format=3 uid="uid://xfjk668ehd0l"]
 
-[ext_resource type="Script" uid="uid://s23ywov6dx43" path="res://Scripts/king_goblin.gd" id="1_1gtwo"]
-[ext_resource type="Texture2D" uid="uid://oodcaeciyqqp" path="res://icon.svg" id="1_2immy"]
+[ext_resource type="Script" uid="uid://vqekr1w8btas" path="res://Scripts/goblin.gd" id="1_1gtwo"]
+[ext_resource type="Texture2D" uid="uid://duv0eysodsn4j" path="res://object_textures/king_goblin.png" id="2_1gtwo"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_1gtwo"]
-size = Vector2(116, 115)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_128dr"]
+radius = 6.0
+height = 16.0
 
-[node name="KingGoblin" type="CharacterBody2D" unique_id=739820165]
+[node name="Goblin" type="CharacterBody2D" unique_id=907832722]
 script = ExtResource("1_1gtwo")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=310345770]
-modulate = Color(1, 0, 1, 1)
-texture = ExtResource("1_2immy")
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1247923362]
+rotation = -1.5707964
+texture = ExtResource("2_1gtwo")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1487745854]
-position = Vector2(-1, -0.5)
-shape = SubResource("RectangleShape2D_1gtwo")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1886082092]
+shape = SubResource("CapsuleShape2D_128dr")
 
-[node name="RayCast2D" type="RayCast2D" parent="." unique_id=1560669786]
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=738826548]
