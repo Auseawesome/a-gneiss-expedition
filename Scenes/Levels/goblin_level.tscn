@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://y541mk6ieeac" path="res://Scenes/Goblin.tscn" id="7_wtlc3"]
 [ext_resource type="PackedScene" uid="uid://ca1sxrbkl8yfc" path="res://Scenes/good_plant.tscn" id="8_e5b4w"]
 [ext_resource type="PackedScene" uid="uid://cbcldpubl0uhd" path="res://Scenes/chest.tscn" id="9_j44pi"]
+[ext_resource type="PackedScene" uid="uid://ce668wee87eta" path="res://Scenes/bad_plant.tscn" id="10_w6fk0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tlwt5"]
 texture = ExtResource("1_ekxmk")
@@ -88,6 +89,7 @@ resource_name = "Objects"
 scenes/1/scene = ExtResource("7_wtlc3")
 scenes/2/scene = ExtResource("8_e5b4w")
 scenes/3/scene = ExtResource("9_j44pi")
+scenes/4/scene = ExtResource("10_w6fk0")
 
 [sub_resource type="TileSet" id="TileSet_e5b4w"]
 sources/0 = SubResource("TileSetAtlasSource_17uc2")

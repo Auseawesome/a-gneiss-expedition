@@ -1,12 +1,18 @@
 [gd_scene format=3 uid="uid://ce668wee87eta"]
 
-[ext_resource type="Script" uid="uid://bvicp8qogp5oe" path="res://Scripts/bad_plant.gd" id="1_hjuwa"]
-[ext_resource type="Texture2D" uid="uid://bswubkyt6par0" path="res://object_textures/goblin.png" id="2_uh8p5"]
+[ext_resource type="Script" path="res://Scripts/bad_plant.gd" id="1_hjuwa"]
+[ext_resource type="Texture2D" uid="uid://dq6qh4rxwna4w" path="res://object_textures/bad_plant.png" id="2_hjuwa"]
 
-[node name="BadPlant" type="Area2D" unique_id=1238853578]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4v6t0"]
+radius = 6.0
+height = 14.0
+
+[node name="Area2D" type="Area2D" unique_id=97141981]
 script = ExtResource("1_hjuwa")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1477786103]
-texture = ExtResource("2_uh8p5")
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=190107394]
+texture = ExtResource("2_hjuwa")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1114934694]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1104516035]
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_4v6t0")
