@@ -11,11 +11,14 @@ func _ready():
 	raycast.enabled = true
 	raycast.add_exception(self)
 
-func _physics_process(_delta):
+func _physics_process(delta):
 	var direction = (target.global_position - global_position).normalized()
-	raycast.target_position = direction * 300 
-	raycast.force_raycast_update()
-	if raycast.is_colliding():
-		velocity = direction * speed
-		look_at(raycast.target_position)
-		move_and_slide()
+	#raycast.target_position = direction * 300 
+	#raycast.force_raycast_update()
+	#if raycast.is_colliding():
+	velocity = direction * speed
+	look_at(target.global_position)
+	var collision = move_and_collide(velocity * delta)
+	if(collision):
+		velocity.bounce(collision.get_normal())
+		move_and_collide(velocity * delta * 20)
