@@ -1,6 +1,6 @@
 [gd_resource type="TileSet" format=3 uid="uid://8uxxi4v3duqx"]
 
-[ext_resource type="Texture2D" uid="uid://boe13ckbbwhlo" path="res://tileset/decorations.png" id="1_8tauj"]
+[ext_resource type="Texture2D" uid="uid://boe13ckbbwhlo" path="res://sprites/tileset/decorations.png" id="1_8tauj"]
 [ext_resource type="PackedScene" uid="uid://ce668wee87eta" path="res://Scenes/bad_plant.tscn" id="2_qn2mi"]
 [ext_resource type="PackedScene" uid="uid://cr6l85823dqbx" path="res://Scenes/Sorcerer.tscn" id="3_ddoho"]
 [ext_resource type="PackedScene" uid="uid://cbcldpubl0uhd" path="res://Scenes/chest.tscn" id="3_tni7p"]

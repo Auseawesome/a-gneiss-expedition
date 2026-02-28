@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://r2ykc38e5hkg"
-path="res://.godot/imported/coin.png-8abc4d6060cb6ee2c3dba9af96d08b9c.ctex"
+uid="uid://boiaq620ku36k"
+path="res://.godot/imported/dirt.png-3aa5a0da7b350fc7b9bb8edeaa141037.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://object_textures/coin.png"
-dest_files=["res://.godot/imported/coin.png-8abc4d6060cb6ee2c3dba9af96d08b9c.ctex"]
+source_file="res://sprites/tileset/dirt.png"
+dest_files=["res://.godot/imported/dirt.png-3aa5a0da7b350fc7b9bb8edeaa141037.ctex"]
 
 [params]
 

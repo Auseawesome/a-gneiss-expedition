@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d26d2otrbfmkg"
-path="res://.godot/imported/good_plant.png-7cc49c0ff916b82878a9ae79d160e55f.ctex"
+uid="uid://duv0eysodsn4j"
+path="res://.godot/imported/king_goblin.png-c16165524db8ce89135d77d811c52e00.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://object_textures/good_plant.png"
-dest_files=["res://.godot/imported/good_plant.png-7cc49c0ff916b82878a9ae79d160e55f.ctex"]
+source_file="res://sprites/character/king_goblin.png"
+dest_files=["res://.godot/imported/king_goblin.png-c16165524db8ce89135d77d811c52e00.ctex"]
 
 [params]
 

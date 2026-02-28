@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://u7o8wjc25b5u"
-path="res://.godot/imported/stone.png-984681f0b6b32f4898e020205e9e1fe7.ctex"
+uid="uid://boe13ckbbwhlo"
+path="res://.godot/imported/decorations.png-0d700cde2209984c36b05aa7204948a5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://tileset/stone.png"
-dest_files=["res://.godot/imported/stone.png-984681f0b6b32f4898e020205e9e1fe7.ctex"]
+source_file="res://sprites/tileset/decorations.png"
+dest_files=["res://.godot/imported/decorations.png-0d700cde2209984c36b05aa7204948a5.ctex"]
 
 [params]
 

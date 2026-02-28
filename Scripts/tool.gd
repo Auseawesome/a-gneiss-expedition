@@ -10,8 +10,8 @@ enum State {
 var state := State.sword
 
 var state_to_texture: Dictionary[State, Texture2D] = {
-	State.sword: preload("res://object_textures/sword.png"),
-	State.pickaxe: preload("res://object_textures/pickaxe.png")
+	State.sword: preload("res://sprites/tool/sword.png"),
+	State.pickaxe: preload("res://sprites/tool/pickaxe.png")
 }
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

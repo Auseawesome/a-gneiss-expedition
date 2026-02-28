@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bswubkyt6par0"
-path="res://.godot/imported/goblin.png-5e3a66d791ddeefd36ea71f2deaa9b6a.ctex"
+uid="uid://dnnlfsq6pngio"
+path="res://.godot/imported/sword_upgrade.png-56100417d84f3a15934b025528e87dd5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://object_textures/goblin.png"
-dest_files=["res://.godot/imported/goblin.png-5e3a66d791ddeefd36ea71f2deaa9b6a.ctex"]
+source_file="res://sprites/upgrades/sword_upgrade.png"
+dest_files=["res://.godot/imported/sword_upgrade.png-56100417d84f3a15934b025528e87dd5.ctex"]
 
 [params]
 

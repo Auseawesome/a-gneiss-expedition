@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b0oh1fwvuhno5"
-path="res://.godot/imported/world_border.png-615fed27bad1f9e0c69a8df282c0161d.ctex"
+uid="uid://c13q61vq7aro1"
+path="res://.godot/imported/grass.png-36b3fd68b88dc9b44c710a8516f12faa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://tileset/world_border.png"
-dest_files=["res://.godot/imported/world_border.png-615fed27bad1f9e0c69a8df282c0161d.ctex"]
+source_file="res://sprites/tileset/grass.png"
+dest_files=["res://.godot/imported/grass.png-36b3fd68b88dc9b44c710a8516f12faa.ctex"]
 
 [params]
 

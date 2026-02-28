@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6ptqrm1pd3ve"
-path="res://.godot/imported/grassy_stone.png-43224a9dfd783ec4f13d5ecfa1fcce0c.ctex"
+uid="uid://dx6ubu5prs47c"
+path="res://.godot/imported/sword.png-0faa23dfc97832f076a1c8207b3ed0ce.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://tileset/grassy_stone.png"
-dest_files=["res://.godot/imported/grassy_stone.png-43224a9dfd783ec4f13d5ecfa1fcce0c.ctex"]
+source_file="res://sprites/tool/sword.png"
+dest_files=["res://.godot/imported/sword.png-0faa23dfc97832f076a1c8207b3ed0ce.ctex"]
 
 [params]
 

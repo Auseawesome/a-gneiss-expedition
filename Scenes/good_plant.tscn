@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ca1sxrbkl8yfc"]
 
-[ext_resource type="Script" path="res://Scripts/good_plant.gd" id="1_yjy5u"]
-[ext_resource type="Texture2D" uid="uid://d26d2otrbfmkg" path="res://object_textures/good_plant.png" id="2_yjy5u"]
+[ext_resource type="Script" uid="uid://b25a5hfimmyce" path="res://Scripts/good_plant.gd" id="1_yjy5u"]
+[ext_resource type="Texture2D" uid="uid://d26d2otrbfmkg" path="res://sprites/pickup/good_plant.png" id="2_yjy5u"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4v6t0"]
 radius = 6.0

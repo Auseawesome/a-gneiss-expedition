@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://s7ggj3hqeay3"
-path="res://.godot/imported/breakable_stone.png-dbbe3a33b0736a40d5e412faa54ae687.ctex"
+uid="uid://r2ykc38e5hkg"
+path="res://.godot/imported/coin.png-26cacfebf2e38f66bbbdce6404e50d41.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://tileset/breakable_stone.png"
-dest_files=["res://.godot/imported/breakable_stone.png-dbbe3a33b0736a40d5e412faa54ae687.ctex"]
+source_file="res://sprites/pickup/coin.png"
+dest_files=["res://.godot/imported/coin.png-26cacfebf2e38f66bbbdce6404e50d41.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bjjtwiyubuvoc"
-path="res://.godot/imported/chest.png-ad0d459a2e6557bfbb53ecd2fc5b547f.ctex"
+uid="uid://dq6qh4rxwna4w"
+path="res://.godot/imported/bad_plant.png-ad894a31d9bd9a2df89f98d762518d74.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://object_textures/chest.png"
-dest_files=["res://.godot/imported/chest.png-ad0d459a2e6557bfbb53ecd2fc5b547f.ctex"]
+source_file="res://sprites/pickup/bad_plant.png"
+dest_files=["res://.godot/imported/bad_plant.png-ad894a31d9bd9a2df89f98d762518d74.ctex"]
 
 [params]
 

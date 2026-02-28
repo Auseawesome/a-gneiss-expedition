@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dx6ubu5prs47c"
-path="res://.godot/imported/sword.png-2c13021070d9d8e1b765054d0bac3672.ctex"
+uid="uid://s7ggj3hqeay3"
+path="res://.godot/imported/breakable_stone.png-a8428f70a4127f38f21b7ae3757a1ec0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://object_textures/sword.png"
-dest_files=["res://.godot/imported/sword.png-2c13021070d9d8e1b765054d0bac3672.ctex"]
+source_file="res://sprites/tileset/breakable_stone.png"
+dest_files=["res://.godot/imported/breakable_stone.png-a8428f70a4127f38f21b7ae3757a1ec0.ctex"]
 
 [params]
 

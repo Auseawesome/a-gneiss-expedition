@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c13q61vq7aro1"
-path="res://.godot/imported/grass.png-69449342c3b2aaca9c327169ac9b8d61.ctex"
+uid="uid://baf30of06o3og"
+path="res://.godot/imported/pickaxe.png-f18e31a936ef45f440bbfae570ff0395.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://tileset/grass.png"
-dest_files=["res://.godot/imported/grass.png-69449342c3b2aaca9c327169ac9b8d61.ctex"]
+source_file="res://sprites/tool/pickaxe.png"
+dest_files=["res://.godot/imported/pickaxe.png-f18e31a936ef45f440bbfae570ff0395.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dq6qh4rxwna4w"
-path="res://.godot/imported/bad_plant.png-0fadcfce6afb7b815e40162b5999c607.ctex"
+uid="uid://d26d2otrbfmkg"
+path="res://.godot/imported/good_plant.png-48e9703a97de37ddc72a585672bf6336.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://object_textures/bad_plant.png"
-dest_files=["res://.godot/imported/bad_plant.png-0fadcfce6afb7b815e40162b5999c607.ctex"]
+source_file="res://sprites/pickup/good_plant.png"
+dest_files=["res://.godot/imported/good_plant.png-48e9703a97de37ddc72a585672bf6336.ctex"]
 
 [params]
 

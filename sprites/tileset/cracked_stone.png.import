@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://baf30of06o3og"
-path="res://.godot/imported/pickaxe.png-9f6e2f7f40b14c5087c8a5f2daf5a7ec.ctex"
+uid="uid://5dv8tdp8fxlg"
+path="res://.godot/imported/cracked_stone.png-48bbbe9ff416bedcf7b7edea3b3888b8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://object_textures/pickaxe.png"
-dest_files=["res://.godot/imported/pickaxe.png-9f6e2f7f40b14c5087c8a5f2daf5a7ec.ctex"]
+source_file="res://sprites/tileset/cracked_stone.png"
+dest_files=["res://.godot/imported/cracked_stone.png-48bbbe9ff416bedcf7b7edea3b3888b8.ctex"]
 
 [params]
 

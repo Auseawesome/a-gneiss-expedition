@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://7fym02m2dn4p"]
 
-[ext_resource type="Script" path="res://Scripts/coins.gd" id="1_ojwyu"]
-[ext_resource type="Texture2D" uid="uid://r2ykc38e5hkg" path="res://object_textures/coin.png" id="2_ojwyu"]
+[ext_resource type="Script" uid="uid://drwlw4kt3mnrk" path="res://Scripts/coins.gd" id="1_ojwyu"]
+[ext_resource type="Texture2D" uid="uid://r2ykc38e5hkg" path="res://sprites/pickup/coin.png" id="2_ojwyu"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_nolx5"]
 radius = 7.0

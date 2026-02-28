@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://duv0eysodsn4j"
-path="res://.godot/imported/king_goblin.png-33c8f23b6b6f52ab3c38669c8d0f580e.ctex"
+uid="uid://bmvyve1vwp2sd"
+path="res://.godot/imported/sorcerer.png-3ff124a72911bb7e3a050f70937d28cc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://object_textures/king_goblin.png"
-dest_files=["res://.godot/imported/king_goblin.png-33c8f23b6b6f52ab3c38669c8d0f580e.ctex"]
+source_file="res://sprites/character/sorcerer.png"
+dest_files=["res://.godot/imported/sorcerer.png-3ff124a72911bb7e3a050f70937d28cc.ctex"]
 
 [params]
 

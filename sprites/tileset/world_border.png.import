@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dnnlfsq6pngio"
-path="res://.godot/imported/sword_upgrade.png-cf1e272477f13513bc4070ad02d947cd.ctex"
+uid="uid://b0oh1fwvuhno5"
+path="res://.godot/imported/world_border.png-12ee01ce29956929e53ecb0c35239704.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://object_textures/sword_upgrade.png"
-dest_files=["res://.godot/imported/sword_upgrade.png-cf1e272477f13513bc4070ad02d947cd.ctex"]
+source_file="res://sprites/tileset/world_border.png"
+dest_files=["res://.godot/imported/world_border.png-12ee01ce29956929e53ecb0c35239704.ctex"]
 
 [params]
 

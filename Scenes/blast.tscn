@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cntuvfgcg4ki6"]
 
-[ext_resource type="Texture2D" uid="uid://bswubkyt6par0" path="res://object_textures/goblin.png" id="1_3lec6"]
+[ext_resource type="Texture2D" uid="uid://bswubkyt6par0" path="res://sprites/character/goblin.png" id="1_3lec6"]
 [ext_resource type="Script" uid="uid://ci2h5lq85wb4r" path="res://Scripts/Blast.gd" id="1_i0bvg"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3lec6"]

@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://casgfxb5ww4im"]
 
-[ext_resource type="TileSet" uid="uid://b3ygv2lw010iy" path="res://tileset/new_tile_set.tres" id="1_87a0f"]
-[ext_resource type="TileSet" uid="uid://8uxxi4v3duqx" path="res://object_textures/object_tile_set.tres" id="2_87a0f"]
+[ext_resource type="TileSet" uid="uid://b3ygv2lw010iy" path="res://tilesets/editor_tile_set.tres" id="1_87a0f"]
+[ext_resource type="TileSet" uid="uid://8uxxi4v3duqx" path="res://tilesets/object_tile_set.tres" id="2_87a0f"]
 
 [node name="Node" type="Node" unique_id=1963909744]
 

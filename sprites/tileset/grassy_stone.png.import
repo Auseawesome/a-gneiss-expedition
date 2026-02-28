@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dv67ycakoa4e0"
-path="res://.godot/imported/player.png-009fc86f75c30f34f53490826be3d944.ctex"
+uid="uid://c6ptqrm1pd3ve"
+path="res://.godot/imported/grassy_stone.png-ede15f3c7eceaa71a5daa9c7d81b61b5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://object_textures/player.png"
-dest_files=["res://.godot/imported/player.png-009fc86f75c30f34f53490826be3d944.ctex"]
+source_file="res://sprites/tileset/grassy_stone.png"
+dest_files=["res://.godot/imported/grassy_stone.png-ede15f3c7eceaa71a5daa9c7d81b61b5.ctex"]
 
 [params]
 
