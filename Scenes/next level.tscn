@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dch1jx5jc1c63"]
 
-[ext_resource type="Script" uid="uid://c7ahd636tdlpe" path="res://Scripts/next_level.gd" id="1_ccgpq"]
+[ext_resource type="Script" uid="uid://bu4n7oa0b1wkn" path="res://Scripts/next_level.gd" id="1_ccgpq"]
 [ext_resource type="Texture2D" uid="uid://b0oh1fwvuhno5" path="res://tileset/world_border.png" id="2_7u8d8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eq5fm"]

@@ -8,6 +8,7 @@ var all_scenes: Array[PackedScene] = [
 	load("res://Scenes/Levels/goblin_level.tscn"),
 	load("res://Scenes/Levels/surprise plants.tscn"),
 	load("res://Scenes/Levels/mave.tscn"),
+	load("res://Scenes/Levels/shop.tscn"),
 	load("res://Scenes/Levels/boss.tscn")
 ]
 

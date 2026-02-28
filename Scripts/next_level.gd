@@ -9,6 +9,8 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 func _on_body_entered(body):
-	GlobalData.current_scene += 1;
+	if (!(body is Player)):
+		return
 	GlobalData.tile_map_manager.load_level(GlobalData.all_scenes[GlobalData.current_scene])
+	GlobalData.current_scene += 1;
 	pass
