@@ -10,7 +10,8 @@ enum TileFill {
 }
 
 enum FloorMaterial {
-	grass = 0
+	dirt = 0,
+	grass = 1
 }
 
 static var enum_to_uv: Dictionary[int, Vector2i] = {
@@ -37,7 +38,7 @@ static var enum_to_uv: Dictionary[int, Vector2i] = {
 	0b1111: Vector2i(1, 0)
 }
 
-var tile_grid: Dictionary[Vector2i, int] = {}
+var tile_grid: Dictionary[Vector2i, FloorMaterial] = {}
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -45,7 +46,18 @@ func _ready() -> void:
 	grass_test.layer_node = $GrassLayer
 	
 	grass_test.set_tile(Vector2i(2, 2))
-	grass_test.render_tile(Vector2i(2, 2))
+	grass_test.set_tile(Vector2i(2, 3))
+	grass_test.set_tile(Vector2i(3, 3))
+	grass_test.set_tile(Vector2i(3, 4))
+	
+	var dirt_test := OffsetTileMap.new()
+	dirt_test.layer_node = $DirtLayer
+	
+	dirt_test.set_tile(Vector2i(2, 2))
+	dirt_test.set_tile(Vector2i(2, 3))
+	dirt_test.set_tile(Vector2i(3, 3))
+	dirt_test.set_tile(Vector2i(3, 4))
+	dirt_test.set_tile(Vector2i(4, 4))
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

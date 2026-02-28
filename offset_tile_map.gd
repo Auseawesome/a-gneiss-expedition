@@ -31,6 +31,8 @@ func set_tile(pos: Vector2i):
 	
 	if (visual_grid[pos + SE] & TileMapManager.TileFill.nw == 0):
 		visual_grid[pos + SE] += TileMapManager.TileFill.nw
+	
+	render_tile(pos)
 
 func clear_tile(pos: Vector2i):
 	if (!visual_grid.has(pos)):
@@ -53,6 +55,8 @@ func clear_tile(pos: Vector2i):
 	
 	if (visual_grid[pos + SE] & TileMapManager.TileFill.nw != 0):
 		visual_grid[pos + SE] -= TileMapManager.TileFill.nw
+	
+	render_tile(pos)
 
 func render_tile(pos: Vector2i):
 	layer_node.set_cell(pos, 0, TileMapManager.enum_to_uv[visual_grid[pos]])
