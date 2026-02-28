@@ -92,3 +92,6 @@ tile_set = SubResource("TileSet_dwbse")
 [node name="Decorations" type="TileMapLayer" parent="." unique_id=1626068151]
 tile_map_data = PackedByteArray("AAANAA4AAAAAAAAAAAADABEAAAAAAAAAAAAHAAwAAAAAAAAAAAALAAkAAAAAAAAAAAAKABYAAAAAAAAAAAA=")
 tile_set = SubResource("TileSet_nn0uo")
+
+[node name="Spawn" type="Node2D" parent="." unique_id=525668607]
+position = Vector2(217, 250)
