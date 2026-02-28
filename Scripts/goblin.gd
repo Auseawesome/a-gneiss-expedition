@@ -15,7 +15,7 @@ var current_health: int
 
 func _ready() -> void:
 	max_health = 30
-	max_speed = 100
+	max_speed = 50
 	acceleration = 8
 	damage = 5
 	bounce_acceleration = 400
@@ -43,6 +43,13 @@ func goblin_movement(delta: float) -> void:
 		if (collision.get_collider() is Player):
 			var player: Player = collision.get_collider()
 			player.current_health -= damage
+		
+		if (collision.get_collider() is Tool):
+			var tool: Tool = collision.get_collider()
+			if (tool.state == Tool.State.sword):
+				current_health -= GlobalData.player.strength
+				if (current_health <= 0):
+					queue_free()
 	
 	# Move goblin
 	move_and_collide(velocity * delta)

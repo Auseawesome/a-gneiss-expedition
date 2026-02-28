@@ -8,7 +8,7 @@ func _ready() -> void:
 	max_health = 150
 	current_health = max_health
 	acceleration=6
-	max_speed=75
+	max_speed=30
 	bounce_acceleration=600
 
 func _physics_process(delta: float) -> void:

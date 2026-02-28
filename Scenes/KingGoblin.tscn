@@ -8,6 +8,8 @@ radius = 6.0
 height = 16.0
 
 [node name="KingGoblin" type="CharacterBody2D" unique_id=1285648359]
+collision_layer = 3
+collision_mask = 3
 script = ExtResource("1_1gtwo")
 metadata/_custom_type_script = "uid://s23ywov6dx43"
 
@@ -16,4 +18,6 @@ rotation = -1.5707964
 texture = ExtResource("2_1gtwo")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1886082092]
+light_mask = 3
+visibility_layer = 3
 shape = SubResource("CapsuleShape2D_128dr")

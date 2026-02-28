@@ -8,6 +8,8 @@ radius = 5.0
 height = 12.0
 
 [node name="Goblin" type="CharacterBody2D" unique_id=284373343]
+collision_layer = 3
+collision_mask = 3
 script = ExtResource("1_wqigr")
 metadata/_custom_type_script = "uid://vqekr1w8btas"
 
