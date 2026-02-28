@@ -17,7 +17,8 @@ enum FloorMaterial {
 	grass = 1,
 	stone = 2,
 	world_border = 3,
-	grassy_stone = 4
+	grassy_stone = 4,
+	breakable_stone = 5
 }
 
 static var enum_to_uv: Dictionary[int, Vector2i] = {
@@ -47,13 +48,15 @@ static var enum_to_uv: Dictionary[int, Vector2i] = {
 @onready var dirt_map := OffsetTileMap.new_with_layer($DirtLayer)
 @onready var grass_map := OffsetTileMap.new_with_layer($GrassLayer)
 @onready var stone_map := OffsetTileMap.new_with_layer($StoneLayer)
+@onready var cracked_map := OffsetTileMap.new_with_layer($CrackedLayer)
 
 @onready var mat_to_tile_maps: Dictionary[FloorMaterial, Array] = {
 	FloorMaterial.dirt: [dirt_map],
 	FloorMaterial.grass: [dirt_map, grass_map],
 	FloorMaterial.stone: [dirt_map, stone_map],
 	FloorMaterial.world_border: [stone_map],
-	FloorMaterial.grassy_stone: [dirt_map, grass_map, stone_map]
+	FloorMaterial.grassy_stone: [dirt_map, grass_map, stone_map],
+	FloorMaterial.breakable_stone: [dirt_map, stone_map, cracked_map]
 }
 
 var tile_grid: Dictionary[Vector2i, FloorMaterial] = {}
@@ -62,6 +65,9 @@ var decorationMap: TileMapLayer
 
 func _ready() -> void:
 	load_level(load("res://Scenes/Levels/goblin_level.tscn"))
+	GlobalData.tile_map_manager = self
+
+
 
 func load_level(scene: PackedScene) -> void:
 	var rootNode: Node = scene.instantiate()

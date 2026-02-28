@@ -1,7 +1,9 @@
 extends Node
 
-var player: CharacterBody2D;
+var player: CharacterBody2D
 var coins:=0
+var tile_map_manager: TileMapManager
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
