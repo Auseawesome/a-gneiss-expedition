@@ -10,6 +10,7 @@ enum TileFill {
 }
 
 enum FloorMaterial {
+	empty = -1,
 	dirt = 0,
 	grass = 1
 }
@@ -38,30 +39,20 @@ static var enum_to_uv: Dictionary[int, Vector2i] = {
 	0b1111: Vector2i(1, 0)
 }
 
+@onready var dirt_map := OffsetTileMap.new_with_layer($DirtLayer)
+@onready var grass_map := OffsetTileMap.new_with_layer($GrassLayer)
+
+@onready var mat_to_tile_maps: Dictionary[FloorMaterial, Array] = {
+	FloorMaterial.dirt: [dirt_map],
+	FloorMaterial.grass: [dirt_map, grass_map]
+}
+
 var tile_grid: Dictionary[Vector2i, FloorMaterial] = {}
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	var grass_test := OffsetTileMap.new()
-	grass_test.layer_node = $GrassLayer
-	
-	grass_test.set_tile(Vector2i(2, 2))
-	grass_test.set_tile(Vector2i(2, 3))
-	grass_test.set_tile(Vector2i(3, 3))
-	grass_test.set_tile(Vector2i(3, 4))
-	
-	var dirt_test := OffsetTileMap.new()
-	dirt_test.layer_node = $DirtLayer
-	
-	dirt_test.set_tile(Vector2i(2, 2))
-	dirt_test.set_tile(Vector2i(2, 3))
-	dirt_test.set_tile(Vector2i(3, 3))
-	dirt_test.set_tile(Vector2i(3, 4))
-	dirt_test.set_tile(Vector2i(4, 4))
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+	set_tile_mat(Vector2i(2, 2), FloorMaterial.grass)
+	set_tile_mat(Vector2i(2, 3), FloorMaterial.dirt)
 
 
 func get_tile_mat(pos: Vector2i):
@@ -69,3 +60,19 @@ func get_tile_mat(pos: Vector2i):
 		return tile_grid[pos]
 	
 	return -1
+
+func set_tile_mat(pos: Vector2i, mat: FloorMaterial) -> void:
+	# Clear previous tile at that position
+	if (tile_grid.has(pos)):
+		for map: OffsetTileMap in mat_to_tile_maps[tile_grid[pos]]:
+			map.clear_tile(pos)
+	
+	# Erase tile if setting mat to -1
+	if (mat == FloorMaterial.empty):
+		tile_grid.erase(pos)
+		return;
+	
+	# Set new tile
+	tile_grid[pos] = mat
+	for map: OffsetTileMap in mat_to_tile_maps[mat]:
+		map.set_tile(pos)
