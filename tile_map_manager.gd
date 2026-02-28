@@ -12,7 +12,10 @@ enum TileFill {
 enum FloorMaterial {
 	empty = -1,
 	dirt = 0,
-	grass = 1
+	grass = 1,
+	stone = 2,
+	world_border = 3,
+	grassy_stone = 4
 }
 
 static var enum_to_uv: Dictionary[int, Vector2i] = {
@@ -41,18 +44,26 @@ static var enum_to_uv: Dictionary[int, Vector2i] = {
 
 @onready var dirt_map := OffsetTileMap.new_with_layer($DirtLayer)
 @onready var grass_map := OffsetTileMap.new_with_layer($GrassLayer)
+@onready var stone_map := OffsetTileMap.new_with_layer($StoneLayer)
 
 @onready var mat_to_tile_maps: Dictionary[FloorMaterial, Array] = {
 	FloorMaterial.dirt: [dirt_map],
-	FloorMaterial.grass: [dirt_map, grass_map]
+	FloorMaterial.grass: [dirt_map, grass_map],
+	FloorMaterial.stone: [dirt_map, stone_map],
+	FloorMaterial.world_border: [stone_map],
+	FloorMaterial.grassy_stone: [dirt_map, grass_map, stone_map]
 }
 
 var tile_grid: Dictionary[Vector2i, FloorMaterial] = {}
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	set_tile_mat(Vector2i(2, 2), FloorMaterial.grass)
-	set_tile_mat(Vector2i(2, 3), FloorMaterial.dirt)
+	var packedLevel: PackedScene = load("res://Scenes/Levels/goblin_level.tscn")
+	
+	var level = packedLevel.instantiate()
+	
+	for tile: Vector2i in level.get_used_cells():
+		set_tile_mat(tile, level.get_cell_source_id(tile) as FloorMaterial)
 
 
 func get_tile_mat(pos: Vector2i):
