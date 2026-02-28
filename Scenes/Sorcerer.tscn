@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://brci5mjc3v0n7"]
+
+[ext_resource type="Script" uid="uid://b48ke8vq51grl" path="res://Scripts/Sorcerer.gd" id="1_at63c"]
+[ext_resource type="Texture2D" uid="uid://oodcaeciyqqp" path="res://icon.svg" id="1_v47t4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_at63c"]
+size = Vector2(93, 88)
+
+[node name="Sorcerer" type="CharacterBody2D" unique_id=1485013380]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_at63c")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1161341499]
+scale = Vector2(0.8046875, 0.8046875)
+texture = ExtResource("1_v47t4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1151591506]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_at63c")
+
+[node name="Timer" type="Timer" parent="." unique_id=1379494761]
+wait_time = 0.5
+autostart = true
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=1460990067]
+position = Vector2(52, -3)
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

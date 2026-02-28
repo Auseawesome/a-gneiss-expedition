@@ -1,9 +1,10 @@
-[gd_scene format=3 uid="uid://b6hogucxlje0v"]
+[gd_scene format=3 uid="uid://4lindkx7pidw"]
 
 [ext_resource type="PackedScene" uid="uid://13ct00s5ay4h" path="res://Scenes/Player.tscn" id="1_ko2s7"]
 [ext_resource type="PackedScene" uid="uid://y541mk6ieeac" path="res://Scenes/Goblin.tscn" id="2_gxb1y"]
 [ext_resource type="PackedScene" uid="uid://xfjk668ehd0l" path="res://Scenes/KingGoblin.tscn" id="3_0dy5s"]
-[ext_resource type="PackedScene" uid="uid://ca1sxrbkl8yfc" path="res://Scenes/good_plant.tscn" id="4_f2nln"]
+[ext_resource type="PackedScene" path="res://Scenes/good_plant.tscn" id="4_f2nln"]
+[ext_resource type="PackedScene" uid="uid://brci5mjc3v0n7" path="res://Scenes/Sorcerer.tscn" id="5_efk68"]
 
 [node name="Node2D" type="Node2D" unique_id=366496985]
 
@@ -19,3 +20,7 @@ position = Vector2(1000, 0)
 
 [node name="Area2D" parent="." unique_id=97141981 instance=ExtResource("4_f2nln")]
 position = Vector2(52, 22)
+
+[node name="Sorcerer" parent="." unique_id=1485013380 instance=ExtResource("5_efk68")]
+position = Vector2(86.00006, -12.0000305)
+rotation = 0.5199266

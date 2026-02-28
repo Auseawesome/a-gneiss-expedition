@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cntuvfgcg4ki6"]
+
+[ext_resource type="Texture2D" uid="uid://bswubkyt6par0" path="res://object_textures/goblin.png" id="1_3lec6"]
+[ext_resource type="Script" uid="uid://ci2h5lq85wb4r" path="res://Scripts/Blast.gd" id="1_i0bvg"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3lec6"]
+radius = 1.0
+height = 36.0
+
+[node name="Blast" type="Area2D" unique_id=1044361944]
+script = ExtResource("1_i0bvg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=884266433]
+z_index = 1
+rotation = 1.5768434
+shape = SubResource("CapsuleShape2D_3lec6")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1434858122]
+position = Vector2(0, 4.2351647e-22)
+scale = Vector2(2.5, 0.28124997)
+texture = ExtResource("1_3lec6")

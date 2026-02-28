@@ -17,7 +17,6 @@ func _ready() -> void:
 	max_speed = 200
 	acceleration = 8
 	damage = 5
-	
 	current_health = max_health
 
 func _physics_process(delta: float) -> void:
