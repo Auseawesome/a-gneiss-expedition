@@ -40,8 +40,8 @@ func goblin_movement(delta: float) -> void:
 		velocity += collision.get_normal() * acceleration * 100
 		
 		if (collision.get_collider() is Player):
-			var player = collision.get_collider()
-			player.health-=damage
+			var player: Player = collision.get_collider()
+			player.current_health -= damage
 	
 	# Move goblin
 	move_and_collide(velocity * delta)
