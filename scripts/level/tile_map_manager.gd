@@ -78,6 +78,10 @@ func load_level(scene: PackedScene) -> void:
 	var rootNode: Node = scene.instantiate()
 	var floorTiles: TileMapLayer = rootNode.find_child("Floor")
 	
+	# Clear previous tiles
+	for key in tile_grid.keys():
+		set_tile_mat(key, FloorMaterial.empty);
+	
 	if (!is_instance_valid(GlobalData.player)):
 		GlobalData.player = player_scene.instantiate()
 		add_child(GlobalData.player)

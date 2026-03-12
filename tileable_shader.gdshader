@@ -3,8 +3,7 @@ shader_type canvas_item;
 uniform sampler2D stone_tex: repeat_enable, filter_nearest;
 uniform sampler2D dirt_tex: repeat_enable, filter_nearest;
 uniform float stone_size = 32;
-uniform float dirt_size = 64
-;
+uniform float dirt_size = 64;
 varying vec2 world_position;
 
 void vertex(){
