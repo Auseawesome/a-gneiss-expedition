@@ -1,0 +1,12 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://nvcgx4yeksil"]
+
+[ext_resource type="Shader" uid="uid://8s4ceuhignlc" path="res://tileable_shader.gdshader" id="1_7u3n8"]
+[ext_resource type="Texture2D" uid="uid://ddfvgimvhoa61" path="res://sprites/tileable/dirt_texture.png" id="2_iwl2a"]
+[ext_resource type="Texture2D" uid="uid://cgghlm7gubrn3" path="res://sprites/tileable/stone_floor.png" id="3_a7dcr"]
+
+[resource]
+shader = ExtResource("1_7u3n8")
+shader_parameter/stone_tex = ExtResource("3_a7dcr")
+shader_parameter/dirt_tex = ExtResource("2_iwl2a")
+shader_parameter/stone_size = 32.0
+shader_parameter/dirt_size = 64.0

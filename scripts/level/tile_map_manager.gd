@@ -13,12 +13,13 @@ enum TileFill {
 
 enum FloorMaterial {
 	empty = -1,
-	dirt = 0,
-	grass = 1,
-	stone = 2,
-	world_border = 3,
-	grassy_stone = 4,
-	breakable_stone = 5
+	stone_floor = 0,
+	dirt = 1,
+	grass = 2,
+	stone = 3,
+	world_border = 4,
+	grassy_stone = 5,
+	breakable_stone = 6
 }
 
 static var enum_to_uv: Dictionary[int, Vector2i] = {
@@ -45,18 +46,20 @@ static var enum_to_uv: Dictionary[int, Vector2i] = {
 	0b1111: Vector2i(1, 0)
 }
 
+@onready var stone_floor_map := OffsetTileMap.new_with_layer($StoneFloorLayer)
 @onready var dirt_map := OffsetTileMap.new_with_layer($DirtLayer)
 @onready var grass_map := OffsetTileMap.new_with_layer($GrassLayer)
 @onready var stone_map := OffsetTileMap.new_with_layer($StoneLayer)
 @onready var cracked_map := OffsetTileMap.new_with_layer($CrackedLayer)
 
 @onready var mat_to_tile_maps: Dictionary[FloorMaterial, Array] = {
-	FloorMaterial.dirt: [dirt_map],
-	FloorMaterial.grass: [dirt_map, grass_map],
-	FloorMaterial.stone: [dirt_map, stone_map],
+	FloorMaterial.stone_floor: [stone_floor_map],
+	FloorMaterial.dirt: [stone_floor_map, dirt_map],
+	FloorMaterial.grass: [stone_floor_map, dirt_map, grass_map],
+	FloorMaterial.stone: [stone_floor_map, stone_map],
 	FloorMaterial.world_border: [stone_map],
-	FloorMaterial.grassy_stone: [dirt_map, grass_map, stone_map],
-	FloorMaterial.breakable_stone: [dirt_map, stone_map, cracked_map]
+	FloorMaterial.grassy_stone: [stone_floor_map, dirt_map, grass_map, stone_map],
+	FloorMaterial.breakable_stone: [stone_floor_map, stone_map, cracked_map]
 }
 
 var tile_grid: Dictionary[Vector2i, FloorMaterial] = {}

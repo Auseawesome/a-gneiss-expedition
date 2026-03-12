@@ -17,7 +17,7 @@ func _process(delta: float) -> void:
 	if (collision):
 		if (collision.get_collider() is TileMapLayer && state == State.pickaxe):
 			var tilePos := Vector2i((collision.get_position() - TileMapManager.OFFSET) / 16)
-			GlobalData.tile_map_manager.set_tile_mat(tilePos, TileMapManager.FloorMaterial.dirt)
+			GlobalData.tile_map_manager.set_tile_mat(tilePos, TileMapManager.FloorMaterial.stone_floor)
 
 func switch_state(new_state: State) -> void:
 	state = new_state
