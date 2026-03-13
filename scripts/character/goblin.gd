@@ -10,6 +10,7 @@ var max_speed: int
 var acceleration: int
 var damage: int
 var bounce_acceleration: int
+var money: int
 
 var current_health: int
 
@@ -19,6 +20,7 @@ func _ready() -> void:
 	acceleration = 8
 	damage = 5
 	bounce_acceleration = 400
+	money = 5
 	
 	current_health = max_health
 
@@ -49,6 +51,7 @@ func goblin_movement(delta: float) -> void:
 			if (tool.state == Tool.State.sword):
 				current_health -= GlobalData.player.strength
 				if (current_health <= 0):
+					GlobalData.coins += money
 					queue_free()
 	
 	# Move goblin

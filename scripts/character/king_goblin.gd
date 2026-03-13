@@ -1,5 +1,6 @@
 class_name KingGoblin
 extends Goblin
+
 var current_wave = 0
 @export var goblin_scene: PackedScene
 var spawn_radius: float = 5.0
@@ -11,6 +12,7 @@ func _ready() -> void:
 	acceleration=6
 	max_speed=30
 	bounce_acceleration=600
+	money = 10
 
 func _physics_process(delta: float) -> void:
 	goblin_movement(delta)
