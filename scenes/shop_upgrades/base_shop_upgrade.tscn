@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://dggxk0uy5utxv"]
+
+[ext_resource type="Texture2D" uid="uid://gf4qbc4a75b3" path="res://sprites/upgrades/pedestal.png" id="1_j0lkg"]
+[ext_resource type="Script" uid="uid://bdawgjb712tsp" path="res://scripts/shop_upgrades/base_shop_upgrade.gd" id="1_urwsk"]
+[ext_resource type="Texture2D" uid="uid://cv4a4n4egsdon" path="res://sprites/upgrades/50_cost.png" id="3_urwsk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_urwsk"]
+size = Vector2(32, 16)
+
+[node name="BaseShopUpgrade" type="Node2D" unique_id=1200600858]
+script = ExtResource("1_urwsk")
+metadata/_custom_type_script = "uid://bdawgjb712tsp"
+
+[node name="Pedestal" type="Sprite2D" parent="." unique_id=1562941508]
+position = Vector2(0, 12)
+texture = ExtResource("1_j0lkg")
+
+[node name="AnimatedItem" type="AnimatedSprite2D" parent="." unique_id=1512666369]
+
+[node name="CostSprite" type="Sprite2D" parent="." unique_id=365985157]
+position = Vector2(0, -20)
+texture = ExtResource("3_urwsk")
+
+[node name="Area2D" type="Area2D" parent="CostSprite" unique_id=544782655]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CostSprite/Area2D" unique_id=362944367]
+shape = SubResource("RectangleShape2D_urwsk")

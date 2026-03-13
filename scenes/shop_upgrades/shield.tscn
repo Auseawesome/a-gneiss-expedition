@@ -1,12 +1,51 @@
-[gd_scene format=3 uid="uid://do1e4u1h3kby7"]
+[gd_scene format=3 uid="uid://cxtj1qcfiiopb"]
 
-[ext_resource type="Script" uid="uid://bk7ibpabjow8m" path="res://Scripts/sheild.gd" id="1_gwirm"]
-[ext_resource type="Texture2D" uid="uid://bjjtwiyubuvoc" path="res://object_textures/chest.png" id="2_8tt4p"]
+[ext_resource type="PackedScene" uid="uid://dggxk0uy5utxv" path="res://scenes/shop_upgrades/base_shop_upgrade.tscn" id="1_h76l6"]
+[ext_resource type="Script" uid="uid://d4mv2yhxraybe" path="res://scripts/shop_upgrades/shield_buy_action.gd" id="2_20tev"]
+[ext_resource type="Texture2D" uid="uid://c3t0w0sepydj3" path="res://sprites/upgrades/shield.png" id="2_fdtlj"]
 
-[node name="Sheild" type="Area2D" unique_id=307428819]
-script = ExtResource("1_gwirm")
+[sub_resource type="Resource" id="Resource_nqhu5"]
+script = ExtResource("2_20tev")
+metadata/_custom_type_script = "uid://d4mv2yhxraybe"
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=667016821]
-texture = ExtResource("2_8tt4p")
+[sub_resource type="AtlasTexture" id="AtlasTexture_fdtlj"]
+atlas = ExtResource("2_fdtlj")
+region = Rect2(0, 0, 16, 16)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=928121859]
+[sub_resource type="AtlasTexture" id="AtlasTexture_20tev"]
+atlas = ExtResource("2_fdtlj")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nqhu5"]
+atlas = ExtResource("2_fdtlj")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nnshb"]
+atlas = ExtResource("2_fdtlj")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r4unr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fdtlj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_20tev")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nqhu5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nnshb")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Shield" unique_id=509534031 instance=ExtResource("1_h76l6")]
+buy_action = SubResource("Resource_nqhu5")
+
+[node name="AnimatedItem" parent="." index="1" unique_id=1512666369]
+sprite_frames = SubResource("SpriteFrames_r4unr")

@@ -24,6 +24,8 @@ var current_health: int:
 	
 var strength := 10
 
+@onready var tool = $Tool
+
 func _ready() -> void:
 	GlobalData.player = self
 	
@@ -35,9 +37,9 @@ func get_input():
 	velocity = input_direction * speed
 	
 	if (Input.is_key_pressed(KEY_1)):
-		$Tool.switch_state(Tool.State.sword)
+		tool.switch_state(Tool.State.sword)
 	elif (Input.is_key_pressed(KEY_2)):
-		$Tool.switch_state(Tool.State.pickaxe)
+		tool.switch_state(Tool.State.pickaxe)
 	
 	# Look at mouse
 	var mouse_pos = get_viewport().get_mouse_position()
