@@ -25,6 +25,8 @@ func _ready() -> void:
 	current_health = max_health
 
 func _physics_process(delta: float) -> void:
+	if (GlobalData.game_over):
+		return
 	goblin_movement(delta)
 
 func goblin_movement(delta: float) -> void:

@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://13ct00s5ay4h" path="res://scenes/characters/player.tscn" id="7_k3n1d"]
 [ext_resource type="Material" uid="uid://nvcgx4yeksil" path="res://sprites/tileable/tileable_material.tres" id="8_2o6r5"]
 [ext_resource type="Texture2D" uid="uid://47or7pl18trr" path="res://sprites/tileset/stone_floor.png" id="9_70uel"]
+[ext_resource type="Script" uid="uid://bcgfflsqpfrek" path="res://scripts/ui_layer.gd" id="14_hiqwa"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_70uel"]
 resource_name = "Stone"
@@ -190,9 +191,10 @@ navigation_enabled = false
 tile_set = SubResource("TileSet_dwbse")
 navigation_enabled = false
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=938915774]
+[node name="UILayer" type="CanvasLayer" parent="." unique_id=938915774]
+script = ExtResource("14_hiqwa")
 
-[node name="Label" type="Label" parent="CanvasLayer" unique_id=411680579]
+[node name="Label" type="Label" parent="UILayer" unique_id=411680579]
 offset_right = 56.0
 offset_bottom = 23.0
 text = "Health:"

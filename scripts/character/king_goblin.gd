@@ -15,6 +15,8 @@ func _ready() -> void:
 	money = 10
 
 func _physics_process(delta: float) -> void:
+	if (GlobalData.game_over):
+		return
 	goblin_movement(delta)
 	if(current_health <= 125 && current_wave == 0):
 		for i in range(2):

@@ -15,11 +15,11 @@ var current_scene := 0
 
 var data_label: Label
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+var game_over := false
+var ui_layer: CanvasLayer
 
+var game_over_scene := preload("res://scenes/menus/game_over.tscn")
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func player_dead() -> void:
+	game_over = true
+	ui_layer.add_child(game_over_scene.instantiate())

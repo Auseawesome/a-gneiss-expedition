@@ -3,6 +3,8 @@ extends Goblin
 @export var projectile_scene: PackedScene
 
 func _physics_process(_delta: float) -> void:
+	if (GlobalData.game_over):
+		return
 	goblin_movement(_delta)
 
 func _ready() -> void:
@@ -14,8 +16,9 @@ func _ready() -> void:
 	
 	current_health = max_health
 	
-# This function must be connected to your Timer's 'timeout' signal!
 func _on_timer_timeout() -> void:
+	if (GlobalData.game_over):
+		return
 	shoot()
 
 func shoot():

@@ -9,14 +9,8 @@ var current_health: int:
 	set(value):
 		current_health=clamp(value,0,max_health)
 		
-		# Redo horrible game over code - don't use load/preload
-		
-		#if (value<0):
-		#	var allChildren := get_tree().root.get_children()
-		#	var game_over = preload("res://scenes/menus/game_over.tscn")
-		#	get_tree().root.add_child(game_over.instantiate())
-		#	for child in allChildren:
-		#		queue_free()
+		if (value<0):
+			GlobalData.player_dead()
 		
 		if (is_instance_valid(GlobalData.data_label)):
 			GlobalData.data_label.text = "Health: " + str(current_health) + "\nMoney: " + str(GlobalData.coins)
@@ -48,5 +42,7 @@ func get_input():
 	look_at(mouse_pos)
 
 func _physics_process(delta):
+	if (GlobalData.game_over):
+		return
 	get_input()
 	move_and_slide()
