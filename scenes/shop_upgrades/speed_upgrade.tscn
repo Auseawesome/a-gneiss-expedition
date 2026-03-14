@@ -45,7 +45,6 @@ animations = [{
 }]
 
 [node name="SpeedUpgrade" unique_id=509534031 instance=ExtResource("1_52tah")]
-cost = 75
 buy_action = SubResource("Resource_32vxj")
 
 [node name="AnimatedItem" parent="." index="1" unique_id=1512666369]
