@@ -1,6 +1,8 @@
 extends Goblin
 
 @export var projectile_scene: PackedScene
+var max_distance_from_player = 30.0;
+var teleport_distance = 20.0;
 
 func _physics_process(_delta: float) -> void:
 	if (GlobalData.game_over):
@@ -8,7 +10,8 @@ func _physics_process(_delta: float) -> void:
 	goblin_movement(_delta)
 
 func _ready() -> void:
-	$Timer.start()
+	$Shoot_Timer.start()
+	$Teleport_Timer.start()
 	max_speed = 10
 	acceleration = 1
 	max_health = 250
@@ -32,3 +35,15 @@ func shoot():
 	
 	bullet.direction = global_position.direction_to(GlobalData.player.global_position)
 	bullet.look_at(GlobalData.player.global_position)
+func teleport():
+	var player = GlobalData.player
+	var player_coords = player.global_position
+	var random_direction = Vector2.LEFT.rotated( randf_range(0, TAU))
+	var offset = player_coords + (random_direction * teleport_distance)
+	global_position = offset;
+
+
+func _on_teleport_teleport_timer_timeout() -> void:
+	var player_position = GlobalData.player.global_position
+	if (player_position.distance_to(global_position) >= max_distance_from_player):
+		teleport()

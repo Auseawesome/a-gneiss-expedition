@@ -14,6 +14,7 @@ script = ExtResource("1_at63c")
 projectile_scene = ExtResource("2_ns241")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1161341499]
+rotation = -1.5707964
 scale = Vector2(0.8046875, 0.8046875)
 texture = ExtResource("2_at63c")
 
@@ -21,11 +22,15 @@ texture = ExtResource("2_at63c")
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_qkygc")
 
-[node name="Timer" type="Timer" parent="." unique_id=1379494761]
+[node name="Shoot_Timer" type="Timer" parent="." unique_id=1379494761]
 wait_time = 4.0
 autostart = true
 
 [node name="Marker2D" type="Marker2D" parent="." unique_id=1460990067]
 position = Vector2(52, -3)
 
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[node name="Teleport_Timer" type="Timer" parent="." unique_id=1815095672]
+wait_time = 7.0
+
+[connection signal="timeout" from="Shoot_Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Teleport_Timer" to="." method="_on_teleport_teleport_timer_timeout"]
