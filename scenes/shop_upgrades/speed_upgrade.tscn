@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://dxululx0q6qrv"]
+
+[ext_resource type="PackedScene" uid="uid://dggxk0uy5utxv" path="res://scenes/shop_upgrades/base_shop_upgrade.tscn" id="1_52tah"]
+[ext_resource type="Script" uid="uid://o8fcqn4rlo0t" path="res://scripts/shop_upgrades/speed_buy_action.gd" id="2_52tah"]
+[ext_resource type="Texture2D" uid="uid://c55g1wks4nnb3" path="res://sprites/upgrades/boots.png" id="3_52tah"]
+
+[sub_resource type="Resource" id="Resource_32vxj"]
+script = ExtResource("2_52tah")
+metadata/_custom_type_script = "uid://o8fcqn4rlo0t"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_32vxj"]
+atlas = ExtResource("3_52tah")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1nmq2"]
+atlas = ExtResource("3_52tah")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d0312"]
+atlas = ExtResource("3_52tah")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y63jp"]
+atlas = ExtResource("3_52tah")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_07yq4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_32vxj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1nmq2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d0312")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y63jp")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="SpeedUpgrade" unique_id=509534031 instance=ExtResource("1_52tah")]
+cost = 75
+buy_action = SubResource("Resource_32vxj")
+
+[node name="AnimatedItem" parent="." index="1" unique_id=1512666369]
+sprite_frames = SubResource("SpriteFrames_07yq4")
+frame_progress = 0.60273623

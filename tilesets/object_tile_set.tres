@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://7fym02m2dn4p" path="res://scenes/pickups/coins.tscn" id="5_ddoho"]
 [ext_resource type="PackedScene" uid="uid://cxtj1qcfiiopb" path="res://scenes/shop_upgrades/shield.tscn" id="5_r2ndp"]
 [ext_resource type="PackedScene" uid="uid://y541mk6ieeac" path="res://scenes/characters/goblin.tscn" id="6_u1pdm"]
+[ext_resource type="PackedScene" uid="uid://dxululx0q6qrv" path="res://scenes/shop_upgrades/speed_upgrade.tscn" id="6_yts0g"]
 [ext_resource type="PackedScene" uid="uid://xfjk668ehd0l" path="res://scenes/characters/king_goblin.tscn" id="7_qn2mi"]
 [ext_resource type="PackedScene" uid="uid://dch1jx5jc1c63" path="res://scenes/misc/next_level.tscn" id="9_nry30"]
 
@@ -37,6 +38,7 @@ scenes/9/scene = ExtResource("9_nry30")
 scenes/10/scene = ExtResource("3_ddoho")
 scenes/14/scene = ExtResource("5_r2ndp")
 scenes/15/scene = ExtResource("4_mbc1o")
+scenes/16/scene = ExtResource("6_yts0g")
 
 [resource]
 sources/0 = SubResource("TileSetAtlasSource_yew5o")
