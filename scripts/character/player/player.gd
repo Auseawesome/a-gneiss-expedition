@@ -18,7 +18,8 @@ var current_health: int:
 	
 var strength := 10
 
-@onready var tool = $Tool
+@onready var tool := $Tool
+@onready var start_time := Time.get_ticks_msec()
 
 func _ready() -> void:
 	GlobalData.player = self

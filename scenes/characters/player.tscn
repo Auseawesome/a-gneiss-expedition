@@ -4,7 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://dv67ycakoa4e0" path="res://sprites/character/player.png" id="2_kyqiw"]
 [ext_resource type="Script" uid="uid://bmeqmw5ocwn1" path="res://scripts/character/player/tool.gd" id="3_dewec"]
 [ext_resource type="Texture2D" uid="uid://dx6ubu5prs47c" path="res://sprites/tool/sword.png" id="3_gntrk"]
-[ext_resource type="Texture2D" uid="uid://baf30of06o3og" path="res://sprites/tool/pickaxe.png" id="5_atpat"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_128dr"]
 radius = 5.0
@@ -32,10 +31,6 @@ position = Vector2(16, 0)
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("3_dewec")
-state_to_texture = Dictionary[int, Texture2D]({
-0: ExtResource("3_gntrk"),
-1: ExtResource("5_atpat")
-})
 metadata/_custom_type_script = "uid://bmeqmw5ocwn1"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tool" unique_id=2038265995]
