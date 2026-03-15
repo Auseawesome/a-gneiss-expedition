@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://cm6auj8k1nsoo"]
+
+[ext_resource type="Script" uid="uid://bf3nxipkpn0m2" path="res://scripts/game_won.gd" id="1_j70r4"]
+
+[node name="GameWon" type="Control" unique_id=50240717]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="." unique_id=738322118]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.24021822, 0.64096314, 1.92523e-07, 1)
+theme_override_font_sizes/font_size = 112
+text = "You won!"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("1_j70r4")

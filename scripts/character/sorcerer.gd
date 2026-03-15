@@ -28,7 +28,7 @@ func _ready() -> void:
 	damage = 10
 	
 	current_health = max_health
-	
+
 func _on_shoot_timer_timeout() -> void:
 	if (GlobalData.game_over):
 		return
@@ -91,3 +91,6 @@ func _on_teleport_teleport_timer_timeout() -> void:
 func _on_teleport_finished() -> void:
 	global_position = tp_preview.global_position
 	tp_preview.queue_free()
+
+func _on_death_extra() -> void:
+	GlobalData.player_won()

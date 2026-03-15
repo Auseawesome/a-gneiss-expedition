@@ -54,7 +54,11 @@ func goblin_movement(delta: float) -> void:
 				current_health -= GlobalData.player.strength
 				if (current_health <= 0):
 					GlobalData.coins += money
+					_on_death_extra()
 					queue_free()
 	
 	# Move goblin
 	move_and_collide(velocity * delta)
+
+func _on_death_extra() -> void:
+	pass

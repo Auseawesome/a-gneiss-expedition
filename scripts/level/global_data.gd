@@ -19,7 +19,12 @@ var game_over := false
 var ui_layer: CanvasLayer
 
 var game_over_scene := preload("res://scenes/menus/game_over.tscn")
+var game_won_scene := preload("res://scenes/menus/game_won.tscn")
 
 func player_dead() -> void:
 	game_over = true
 	ui_layer.add_child(game_over_scene.instantiate())
+
+func player_won() -> void:
+	game_over = true
+	ui_layer.add_child(game_won_scene.instantiate())
