@@ -13,7 +13,7 @@ var current_health: int:
 			GlobalData.player_dead()
 		
 		if (is_instance_valid(GlobalData.data_label)):
-			GlobalData.data_label.text = "Health: " + str(current_health) + "\nMoney: " + str(GlobalData.coins)
+			GlobalData.data_label.text = "Health: " + str(current_health) + "/" + str(max_health) + "\nMoney: " + str(GlobalData.coins)
 	
 	
 var strength := 10

@@ -5,7 +5,7 @@ extends Label
 func _ready() -> void:
 	GlobalData.data_label = self
 	
-	GlobalData.data_label.text = "Health: " + str(GlobalData.player.current_health) + "\nMoney: " + str(GlobalData.coins)
+	GlobalData.data_label.text = "Health: " + str(GlobalData.player.current_health) + "/" + str(GlobalData.player.current_health) + "\nMoney: " + str(GlobalData.coins)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

@@ -6,7 +6,7 @@ var coins:=0:
 		coins = value
 		
 		if (is_instance_valid(GlobalData.data_label)):
-			GlobalData.data_label.text = "Health: " + str(GlobalData.player.current_health) + "\nMoney: " + str(GlobalData.coins)
+			GlobalData.data_label.text = "Health: " + str(player.current_health) + "/" + str(player.max_health) + "\nMoney: " + str(coins)
 
 
 var tile_map_manager: TileMapManager
