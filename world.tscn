@@ -164,6 +164,18 @@ physics_layer_0/collision_layer = 3
 physics_layer_0/collision_mask = 3
 sources/0 = SubResource("TileSetAtlasSource_036b0")
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hiqwa"]
+bg_color = Color(0.49309307, 0.3372043, 0.15364426, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.36849368, 0.15191245, 0.042308606, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
 [node name="Node2D" type="Node" unique_id=111583318]
 
 [node name="TileMapManager" type="Node2D" parent="." unique_id=1490718295]
@@ -194,8 +206,25 @@ navigation_enabled = false
 [node name="UILayer" type="CanvasLayer" parent="." unique_id=938915774]
 script = ExtResource("14_hiqwa")
 
-[node name="Label" type="Label" parent="UILayer" unique_id=411680579]
-offset_right = 56.0
-offset_bottom = 23.0
+[node name="MarginContainer" type="MarginContainer" parent="UILayer" unique_id=1752591767]
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+
+[node name="PanelContainer" type="PanelContainer" parent="UILayer/MarginContainer" unique_id=450897728]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_hiqwa")
+
+[node name="MarginContainer" type="MarginContainer" parent="UILayer/MarginContainer/PanelContainer" unique_id=10568696]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Label" type="Label" parent="UILayer/MarginContainer/PanelContainer/MarginContainer" unique_id=411680579]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
 text = "Health:"
 script = ExtResource("6_dwbse")
