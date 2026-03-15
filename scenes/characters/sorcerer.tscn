@@ -1,36 +1,46 @@
 [gd_scene format=3 uid="uid://cr6l85823dqbx"]
 
 [ext_resource type="Script" uid="uid://x26new5a4psn" path="res://scripts/character/sorcerer.gd" id="1_at63c"]
+[ext_resource type="Texture2D" uid="uid://btgo4r20fmlft" path="res://sprites/character/sorcerer_preview.png" id="2_31ao7"]
 [ext_resource type="Texture2D" uid="uid://bmvyve1vwp2sd" path="res://sprites/character/sorcerer.png" id="2_at63c"]
 [ext_resource type="PackedScene" uid="uid://cntuvfgcg4ki6" path="res://scenes/projectiles/blast.tscn" id="2_ns241"]
+[ext_resource type="Texture2D" uid="uid://ddabmy1y56hsw" path="res://sprites/character/sorcerer_1.png" id="4_2uthu"]
+[ext_resource type="Texture2D" uid="uid://4tnfvwscikla" path="res://sprites/character/sorcerer_2.png" id="5_rescs"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qkygc"]
-height = 24.0
+radius = 11.0
+height = 22.0
 
 [node name="Sorcerer" type="CharacterBody2D" unique_id=1485013380]
-collision_layer = 2
-collision_mask = 2
+collision_layer = 3
+collision_mask = 3
 script = ExtResource("1_at63c")
+preview_texture = ExtResource("2_31ao7")
 projectile_scene = ExtResource("2_ns241")
+phase_1_tex = ExtResource("4_2uthu")
+phase_2_tex = ExtResource("5_rescs")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1161341499]
 rotation = -1.5707964
-scale = Vector2(0.8046875, 0.8046875)
 texture = ExtResource("2_at63c")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1151591506]
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_qkygc")
 
-[node name="Shoot_Timer" type="Timer" parent="." unique_id=1379494761]
-wait_time = 4.0
-autostart = true
+[node name="ShootTimer" type="Timer" parent="." unique_id=1379494761]
+wait_time = 3.0
 
 [node name="Marker2D" type="Marker2D" parent="." unique_id=1460990067]
 position = Vector2(52, -3)
 
-[node name="Teleport_Timer" type="Timer" parent="." unique_id=1815095672]
-wait_time = 7.0
+[node name="TeleportTimer" type="Timer" parent="." unique_id=1815095672]
+wait_time = 5.0
 
-[connection signal="timeout" from="Shoot_Timer" to="." method="_on_timer_timeout"]
-[connection signal="timeout" from="Teleport_Timer" to="." method="_on_teleport_teleport_timer_timeout"]
+[node name="TeleportConfirmTimer" type="Timer" parent="." unique_id=1980178270]
+wait_time = 2.0
+one_shot = true
+
+[connection signal="timeout" from="ShootTimer" to="." method="_on_shoot_timer_timeout"]
+[connection signal="timeout" from="TeleportTimer" to="." method="_on_teleport_teleport_timer_timeout"]
+[connection signal="timeout" from="TeleportConfirmTimer" to="." method="_on_teleport_finished"]
